@@ -1,3 +1,6 @@
 {
-  "recommendations": ["samverschueren.linter-xo"]
+  "recommendations": [
+    "samverschueren.linter-xo",
+    "arcanis.vscode-zipfs"
+  ]
 }
