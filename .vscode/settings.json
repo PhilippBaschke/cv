@@ -1,0 +1,11 @@
+{
+  "xo.enable": true,
+  "xo.format.enable": true,
+  "xo.runtime": "./.yarn/xo-runtime",
+  "[javascript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo"
+  }
+}
