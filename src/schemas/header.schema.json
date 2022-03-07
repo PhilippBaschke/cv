@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CV header configuration",
+  "type": "object",
+  "properties": {
+    "email": {
+      "description": "The email address for the CV header",
+      "type": "string"
+    },
+    "name": {
+      "description": "The full name for the CV header",
+      "type": "string"
+    }
+  },
+  "required": ["email", "name"]
+}
