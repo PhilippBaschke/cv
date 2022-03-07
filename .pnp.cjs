@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.39"],\
             ["@types/rimraf", "npm:3.0.2"],\
             ["@typescript-eslint/parser", "virtual:a96c8b2a259da6786c736df9cfd8b352dca20b95cb75c03c805c2851d9be9aa3be76abbe8d967f432834dec2af5262dee8bd0dab6432f53c147216fc03dd38fc#npm:5.13.0"],\
+            ["commander", "npm:9.0.0"],\
             ["cpy-cli", "npm:4.0.0"],\
             ["js-yaml", "npm:4.1.0"],\
             ["npm-run-all", "npm:4.1.5"],\
@@ -172,6 +173,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.39"],\
             ["@types/rimraf", "npm:3.0.2"],\
             ["@typescript-eslint/parser", "virtual:a96c8b2a259da6786c736df9cfd8b352dca20b95cb75c03c805c2851d9be9aa3be76abbe8d967f432834dec2af5262dee8bd0dab6432f53c147216fc03dd38fc#npm:5.13.0"],\
+            ["commander", "npm:9.0.0"],\
             ["cpy-cli", "npm:4.0.0"],\
             ["js-yaml", "npm:4.1.0"],\
             ["npm-run-all", "npm:4.1.5"],\
@@ -1211,6 +1213,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["color-string", "npm:1.9.0"],\
             ["color-name", "npm:1.1.4"],\
             ["simple-swizzle", "npm:0.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["commander", [\
+        ["npm:9.0.0", {\
+          "packageLocation": "./.yarn/cache/commander-npm-9.0.0-b4ddcedf46-15066e433d.zip/node_modules/commander/",\
+          "packageDependencies": [\
+            ["commander", "npm:9.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\

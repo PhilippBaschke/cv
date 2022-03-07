@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@react-pdf/renderer": "2.1.1",
+    "commander": "9.0.0",
     "js-yaml": "4.1.0",
     "react": "17.0.2"
   }
