@@ -1,0 +1,7 @@
+{
+  "prettier": true,
+  "rules": {
+    "import/extensions": "off",
+    "unicorn/prefer-module": "off"
+  }
+}

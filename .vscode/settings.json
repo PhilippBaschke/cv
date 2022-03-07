@@ -1,0 +1,20 @@
+{
+  "xo.enable": true,
+  "xo.format.enable": true,
+  "xo.runtime": "./.yarn/xo-runtime",
+  "[javascript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo"
+  },
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "yaml.schemas": {
+    "src/schemas/header.schema.json": ["data/header.yml"]
+  }
+}

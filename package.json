@@ -1,0 +1,31 @@
+{
+  "name": "@philippbaschke/cv",
+  "packageManager": "yarn@3.2.0",
+  "bin": "dist/cli.js",
+  "devDependencies": {
+    "@types/js-yaml": "^4",
+    "@types/node": "17.0.21",
+    "@types/react": "^17",
+    "@types/rimraf": "^3",
+    "@typescript-eslint/parser": "5.13.0",
+    "cpy-cli": "4.0.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "3.0.2",
+    "typescript": "4.6.2",
+    "xo": "0.48.0"
+  },
+  "scripts": {
+    "build:ts": "tsc",
+    "build:data": "cpy 'src/data/*.yml' 'dist/data'",
+    "build": "run-p 'build:*'",
+    "clean": "rimraf dist",
+    "cli:run": "node dist/cli.js",
+    "cli": "run-s clean build \"cli:run {@}\" --",
+    "test": "xo"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "2.1.1",
+    "js-yaml": "4.1.0",
+    "react": "17.0.2"
+  }
+}
