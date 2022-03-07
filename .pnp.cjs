@@ -34,12 +34,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@react-pdf/renderer", "virtual:a96c8b2a259da6786c736df9cfd8b352dca20b95cb75c03c805c2851d9be9aa3be76abbe8d967f432834dec2af5262dee8bd0dab6432f53c147216fc03dd38fc#npm:2.1.1"],\
+            ["@types/fs-extra", "npm:9.0.13"],\
             ["@types/js-yaml", "npm:4.0.5"],\
             ["@types/node", "npm:17.0.21"],\
             ["@types/react", "npm:17.0.39"],\
             ["@types/rimraf", "npm:3.0.2"],\
             ["@typescript-eslint/parser", "virtual:a96c8b2a259da6786c736df9cfd8b352dca20b95cb75c03c805c2851d9be9aa3be76abbe8d967f432834dec2af5262dee8bd0dab6432f53c147216fc03dd38fc#npm:5.13.0"],\
+            ["commander", "npm:9.0.0"],\
             ["cpy-cli", "npm:4.0.0"],\
+            ["fs-extra", "npm:10.0.1"],\
             ["js-yaml", "npm:4.1.0"],\
             ["npm-run-all", "npm:4.1.5"],\
             ["react", "npm:17.0.2"],\
@@ -167,12 +170,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@philippbaschke/cv", "workspace:."],\
             ["@react-pdf/renderer", "virtual:a96c8b2a259da6786c736df9cfd8b352dca20b95cb75c03c805c2851d9be9aa3be76abbe8d967f432834dec2af5262dee8bd0dab6432f53c147216fc03dd38fc#npm:2.1.1"],\
+            ["@types/fs-extra", "npm:9.0.13"],\
             ["@types/js-yaml", "npm:4.0.5"],\
             ["@types/node", "npm:17.0.21"],\
             ["@types/react", "npm:17.0.39"],\
             ["@types/rimraf", "npm:3.0.2"],\
             ["@typescript-eslint/parser", "virtual:a96c8b2a259da6786c736df9cfd8b352dca20b95cb75c03c805c2851d9be9aa3be76abbe8d967f432834dec2af5262dee8bd0dab6432f53c147216fc03dd38fc#npm:5.13.0"],\
+            ["commander", "npm:9.0.0"],\
             ["cpy-cli", "npm:4.0.0"],\
+            ["fs-extra", "npm:10.0.1"],\
             ["js-yaml", "npm:4.1.0"],\
             ["npm-run-all", "npm:4.1.5"],\
             ["react", "npm:17.0.2"],\
@@ -406,6 +412,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-estree-npm-0.0.51-bc20719267-e56a3bcf75.zip/node_modules/@types/estree/",\
           "packageDependencies": [\
             ["@types/estree", "npm:0.0.51"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/fs-extra", [\
+        ["npm:9.0.13", {\
+          "packageLocation": "./.yarn/cache/@types-fs-extra-npm-9.0.13-12fb7badd7-add79e212a.zip/node_modules/@types/fs-extra/",\
+          "packageDependencies": [\
+            ["@types/fs-extra", "npm:9.0.13"],\
+            ["@types/node", "npm:17.0.21"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1211,6 +1227,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["color-string", "npm:1.9.0"],\
             ["color-name", "npm:1.1.4"],\
             ["simple-swizzle", "npm:0.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["commander", [\
+        ["npm:9.0.0", {\
+          "packageLocation": "./.yarn/cache/commander-npm-9.0.0-b4ddcedf46-15066e433d.zip/node_modules/commander/",\
+          "packageDependencies": [\
+            ["commander", "npm:9.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2457,6 +2482,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["fs-extra", [\
+        ["npm:10.0.1", {\
+          "packageLocation": "./.yarn/cache/fs-extra-npm-10.0.1-7c8ee14050-c1faaa5eb9.zip/node_modules/fs-extra/",\
+          "packageDependencies": [\
+            ["fs-extra", "npm:10.0.1"],\
+            ["graceful-fs", "npm:4.2.9"],\
+            ["jsonfile", "npm:6.1.0"],\
+            ["universalify", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["fs.realpath", [\
         ["npm:1.0.0", {\
           "packageLocation": "./.yarn/cache/fs.realpath-npm-1.0.0-c8f05d8126-99ddea01a7.zip/node_modules/fs.realpath/",\
@@ -3268,6 +3305,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["json5", "npm:2.2.0"],\
             ["minimist", "npm:1.2.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["jsonfile", [\
+        ["npm:6.1.0", {\
+          "packageLocation": "./.yarn/cache/jsonfile-npm-6.1.0-20a4796cee-7af3b8e1ac.zip/node_modules/jsonfile/",\
+          "packageDependencies": [\
+            ["jsonfile", "npm:6.1.0"],\
+            ["graceful-fs", "npm:4.2.9"],\
+            ["universalify", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5072,6 +5120,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["unicode-trie", "npm:0.3.1"],\
             ["pako", "npm:0.2.9"],\
             ["tiny-inflate", "npm:1.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["universalify", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/universalify-npm-2.0.0-03b8b418a8-2406a4edf4.zip/node_modules/universalify/",\
+          "packageDependencies": [\
+            ["universalify", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
