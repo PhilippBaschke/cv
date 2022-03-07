@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { cwd } from 'node:process';
 import { Cv } from './layout/cv';
-import type { HeaderData } from './data/header';
+import type { HeaderData } from './data-types/header-data';
 import React from 'react';
 import { renderToFile } from '@react-pdf/renderer';
 import yaml from 'js-yaml';

@@ -1,4 +1,4 @@
-import type { HeaderData } from '../data/header';
+import type { HeaderData } from '../data-types/header-data';
 import { Header } from './header';
 import React from 'react';
 import { Page, Document } from '@react-pdf/renderer';
