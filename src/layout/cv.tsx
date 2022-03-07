@@ -1,12 +1,16 @@
+import type { HeaderData } from '../data/header';
+import { Header } from './header';
 import React from 'react';
-import { Page, Text, View, Document } from '@react-pdf/renderer';
+import { Page, Document } from '@react-pdf/renderer';
 
-const Cv = () => (
+type Props = {
+  header: HeaderData;
+};
+
+const Cv = ({ header }: Props) => (
   <Document>
     <Page size="A4">
-      <View>
-        <Text>CV</Text>
-      </View>
+      <Header {...header} />
     </Page>
   </Document>
 );
