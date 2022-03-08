@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CV personal data",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "description": "Full name",
+      "type": "string"
+    },
+
+    "location": {
+      "description": "Current location",
+      "type": "object",
+      "properties": {
+        "city": {
+          "description": "City",
+          "type": "string"
+        },
+        "country": {
+          "description": "Country",
+          "type": "string"
+        }
+      },
+      "required": ["city", "country"]
+    },
+
+    "jobTitle": {
+      "description": "Job title",
+      "type": "string"
+    },
+    "summary": {
+      "description": "A summary of the CV (tailored to the job)",
+      "type": "string"
+    }
+  },
+  "required": ["name"]
+}
