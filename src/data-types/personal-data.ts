@@ -1,12 +1,11 @@
+import type { Location } from './location';
+
 type PersonalData = {
   /** Full name */
   name: string;
 
   /** Current location */
-  location?: {
-    city: string;
-    country: string;
-  };
+  location?: Location;
 
   /** Job title */
   jobTitle?: string;

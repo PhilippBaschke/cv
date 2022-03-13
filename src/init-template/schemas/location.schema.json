@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Location",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "city": {
+      "description": "City",
+      "type": "string"
+    },
+    "country": {
+      "description": "Country",
+      "type": "string"
+    }
+  },
+  "required": ["city", "country"]
+}

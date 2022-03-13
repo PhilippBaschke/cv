@@ -11,18 +11,7 @@
 
     "location": {
       "description": "Current location",
-      "type": "object",
-      "properties": {
-        "city": {
-          "description": "City",
-          "type": "string"
-        },
-        "country": {
-          "description": "Country",
-          "type": "string"
-        }
-      },
-      "required": ["city", "country"]
+      "$ref": "location.schema.json"
     },
 
     "jobTitle": {
