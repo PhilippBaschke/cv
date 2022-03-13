@@ -3,6 +3,7 @@ import path from 'node:path';
 import { cwd } from 'node:process';
 import { Cv } from './layout/cv';
 import type { ContactData } from './data-types/contact-data';
+import type { EducationData } from './data-types/education-data';
 import type { PersonalData } from './data-types/personal-data';
 import type { WorkExperienceData } from './data-types/work-experience-data';
 import React from 'react';
@@ -21,6 +22,10 @@ const create = async (outputFile: string, { dataProject }: Options) => {
     fs.readFileSync(path.join(projectPath, 'data', 'contact.yml'), 'utf8'),
   ) as ContactData;
 
+  const education = yaml.load(
+    fs.readFileSync(path.join(projectPath, 'data', 'education.yml'), 'utf8'),
+  ) as EducationData;
+
   const personal = yaml.load(
     fs.readFileSync(path.join(projectPath, 'data', 'personal.yml'), 'utf8'),
   ) as PersonalData;
@@ -36,6 +41,7 @@ const create = async (outputFile: string, { dataProject }: Options) => {
   await renderToFile(
     <Cv
       contact={contact}
+      education={education}
       personal={personal}
       workExperience={workExperience}
     />,

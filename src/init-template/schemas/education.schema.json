@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CV education data",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "degree": {
+        "description": "Degree",
+        "type": "string"
+      },
+
+      "school": {
+        "description": "Information about the school",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "description": "School name",
+            "type": "string"
+          },
+          "location": {
+            "description": "School location",
+            "$ref": "location.schema.json"
+          },
+          "website": {
+            "description": "School website (without https://)",
+            "type": "string"
+          }
+        },
+        "required": ["name"]
+      },
+
+      "startDate": {
+        "description": "When did you start your education? (YYYY-MM)",
+        "type": "string"
+      },
+      "endDate": {
+        "description": "When did you finish your education? (YYYY-MM)",
+        "type": "string"
+      },
+
+      "information": {
+        "description": "Information about your education",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "description": "The title of the information section",
+              "type": "string"
+            },
+            "content": {
+              "description": "The content of the information section",
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 7
+            }
+          },
+          "required": ["title", "content"]
+        },
+        "maxItems": 3
+      }
+    },
+    "required": ["degree", "school", "startDate"]
+  }
+}

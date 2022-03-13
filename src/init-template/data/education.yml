@@ -1,0 +1,26 @@
+- degree: Bachelor of Science (BSc) in Computer Science
+
+  school:
+    name: Top University
+    location:
+      city: Berlin
+      country: Germany
+    website: www.example.com
+
+  startDate: 2018-01
+  endDate: 2020-12
+
+  information:
+    - title: Thesis
+      content:
+        - The topic of the thesis
+    - title: Relevant Coursework
+      content: 
+        - Course 1
+        - Course 2
+        - Course n
+    - title: Projects
+      content:
+        - Project 1
+        - Project 2
+        - Project n

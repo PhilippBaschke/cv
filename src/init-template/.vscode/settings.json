@@ -1,6 +1,7 @@
 {
   "yaml.schemas": {
     "schemas/contact.schema.json": ["data/contact.yml"],
+    "schemas/education.schema.json": ["data/education.yml"],
     "schemas/personal.schema.json": ["data/personal.yml"],
     "schemas/work-experience.schema.json": ["data/work-experience.yml"]
   }
