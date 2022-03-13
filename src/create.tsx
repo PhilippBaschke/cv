@@ -5,6 +5,7 @@ import { Cv } from './layout/cv';
 import type { ContactData } from './data-types/contact-data';
 import type { EducationData } from './data-types/education-data';
 import type { PersonalData } from './data-types/personal-data';
+import type { SkillsData } from './data-types/skills-data';
 import type { WorkExperienceData } from './data-types/work-experience-data';
 import React from 'react';
 import { renderToFile } from '@react-pdf/renderer';
@@ -30,6 +31,10 @@ const create = async (outputFile: string, { dataProject }: Options) => {
     fs.readFileSync(path.join(projectPath, 'data', 'personal.yml'), 'utf8'),
   ) as PersonalData;
 
+  const skills = yaml.load(
+    fs.readFileSync(path.join(projectPath, 'data', 'skills.yml'), 'utf8'),
+  ) as SkillsData;
+
   const workExperience = yaml.load(
     fs.readFileSync(
       path.join(projectPath, 'data', 'work-experience.yml'),
@@ -43,6 +48,7 @@ const create = async (outputFile: string, { dataProject }: Options) => {
       contact={contact}
       education={education}
       personal={personal}
+      skills={skills}
       workExperience={workExperience}
     />,
     filePath,
