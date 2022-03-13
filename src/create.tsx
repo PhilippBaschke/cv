@@ -4,6 +4,7 @@ import { cwd } from 'node:process';
 import { Cv } from './layout/cv';
 import type { ContactData } from './data-types/contact-data';
 import type { PersonalData } from './data-types/personal-data';
+import type { WorkExperienceData } from './data-types/work-experience-data';
 import React from 'react';
 import { renderToFile } from '@react-pdf/renderer';
 import yaml from 'js-yaml';
@@ -24,8 +25,22 @@ const create = async (outputFile: string, { dataProject }: Options) => {
     fs.readFileSync(path.join(projectPath, 'data', 'personal.yml'), 'utf8'),
   ) as PersonalData;
 
+  const workExperience = yaml.load(
+    fs.readFileSync(
+      path.join(projectPath, 'data', 'work-experience.yml'),
+      'utf8',
+    ),
+  ) as WorkExperienceData;
+
   console.log(`Saving CV in ${filePath}`);
-  await renderToFile(<Cv contact={contact} personal={personal} />, filePath);
+  await renderToFile(
+    <Cv
+      contact={contact}
+      personal={personal}
+      workExperience={workExperience}
+    />,
+    filePath,
+  );
 };
 
 export { create };

@@ -20,6 +20,9 @@
     ],
     "src/init-template/schemas/personal.schema.json": [
       "src/init-template/data/personal.yml"
+    ],
+    "src/init-template/schemas/work-experience.schema.json": [
+      "src/init-template/data/work-experience.yml"
     ]
   }
 }

@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:a96c8b2a259da6786c736df9cfd8b352dca20b95cb75c03c805c2851d9be9aa3be76abbe8d967f432834dec2af5262dee8bd0dab6432f53c147216fc03dd38fc#npm:5.13.0"],\
             ["commander", "npm:9.0.0"],\
             ["cpy-cli", "npm:4.0.0"],\
+            ["date-fns", "npm:2.28.0"],\
             ["fs-extra", "npm:10.0.1"],\
             ["js-yaml", "npm:4.1.0"],\
             ["npm-run-all", "npm:4.1.5"],\
@@ -178,6 +179,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:a96c8b2a259da6786c736df9cfd8b352dca20b95cb75c03c805c2851d9be9aa3be76abbe8d967f432834dec2af5262dee8bd0dab6432f53c147216fc03dd38fc#npm:5.13.0"],\
             ["commander", "npm:9.0.0"],\
             ["cpy-cli", "npm:4.0.0"],\
+            ["date-fns", "npm:2.28.0"],\
             ["fs-extra", "npm:10.0.1"],\
             ["js-yaml", "npm:4.1.0"],\
             ["npm-run-all", "npm:4.1.5"],\
@@ -1370,6 +1372,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/csstype-npm-3.0.11-b49897178d-95e56abfe9.zip/node_modules/csstype/",\
           "packageDependencies": [\
             ["csstype", "npm:3.0.11"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["date-fns", [\
+        ["npm:2.28.0", {\
+          "packageLocation": "./.yarn/cache/date-fns-npm-2.28.0-c19c5add1b-a0516b2e4f.zip/node_modules/date-fns/",\
+          "packageDependencies": [\
+            ["date-fns", "npm:2.28.0"]\
           ],\
           "linkType": "HARD"\
         }]\

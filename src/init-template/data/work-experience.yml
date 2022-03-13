@@ -1,0 +1,45 @@
+# Current job
+- jobTitle: Senior Front-end Engineer
+
+  company:
+    name: Software GmbH
+    location:
+      city: Berlin
+      country: Germany
+    website: www.example.com
+
+  startDate: 2022-01
+ 
+  product: 
+    description: B2B software used by every big company
+    website: www.example.com
+
+  achievements:
+    - Accomplished [X] as measured by [Y] by doing [Z]
+    - Accomplished [X] as measured by [Y] by doing [Z]
+    - Accomplished [X] as measured by [Y] by doing [Z]
+    - Levaraged knowledge in [1], [2] and [3]
+
+
+# Previous job
+- jobTitle: Front-end Engineer
+
+  company:
+    name: Social Network GmbH
+    location:
+      city: Berlin
+      country: Germany
+    website: www.example.com
+
+  startDate: 2021-01
+  endDate: 2021-12
+ 
+  product: 
+    description: Social network with over 100 million users
+    website: www.example.com
+
+  achievements:
+    - Accomplished [X] as measured by [Y] by doing [Z]
+    - Accomplished [X] as measured by [Y] by doing [Z]
+    - Accomplished [X] as measured by [Y] by doing [Z]
+    - Levaraged knowledge in [1], [2] and [3]
