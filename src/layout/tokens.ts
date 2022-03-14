@@ -1,4 +1,5 @@
 const color = {
+  primary: '#068093',
   text: {
     intense: '#1C1C1C',
     quiet: '#595959',

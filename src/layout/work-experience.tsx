@@ -1,4 +1,5 @@
 import type { WorkExperienceData } from '../data-types/work-experience-data';
+import { SectionTitle } from './components/section-title';
 import { formatDate } from './format-date';
 import { color, fontWeight, space, typeScale } from './tokens';
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
@@ -8,9 +9,7 @@ const styles = StyleSheet.create({
   achievement: { display: 'flex', flexDirection: 'row' },
   achievements: { marginTop: space[2] },
   bulletPoint: { marginLeft: space[2], marginRight: space[1] },
-  container: { marginTop: space[3] },
   companyAndDate: { color: color.text.quiet },
-  headline: { fontSize: typeScale[2], fontWeight: fontWeight.strong },
   jobTitle: { fontSize: typeScale[1], fontWeight: fontWeight.strong },
   workExperience: { marginTop: space[3] },
 });
@@ -23,8 +22,8 @@ const WorkExperience = ({ workExperience }: Props) => {
   if (workExperience.length === 0) return null;
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.headline}>Work Experience</Text>
+    <View>
+      <SectionTitle>Work Experience</SectionTitle>
       {workExperience.map(
         (
           { achievements, company, endDate, jobTitle, product, startDate },
@@ -38,7 +37,10 @@ const WorkExperience = ({ workExperience }: Props) => {
           return (
             // Using index as key is fine because the items are never reordered
             // https://reactjs.org/docs/reconciliation.html#keys
-            <View key={index} style={styles.workExperience}>
+            <View
+              key={index}
+              style={index > 0 ? styles.workExperience : undefined}
+            >
               <Text style={styles.jobTitle}>{jobTitle}</Text>
               <Text style={styles.companyAndDate}>
                 {company.website === undefined ? (

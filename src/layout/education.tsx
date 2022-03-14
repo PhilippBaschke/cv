@@ -1,4 +1,5 @@
 import type { EducationData } from '../data-types/education-data';
+import { SectionTitle } from './components/section-title';
 import { formatDate } from './format-date';
 import { color, fontWeight, space, typeScale } from './tokens';
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
@@ -6,10 +7,8 @@ import React from 'react';
 
 const styles = StyleSheet.create({
   bulletPoint: { marginLeft: space[2], marginRight: space[1] },
-  container: { marginTop: space[3] },
   degree: { fontSize: typeScale[1], fontWeight: fontWeight.strong },
   education: { marginTop: space[3] },
-  headline: { fontSize: typeScale[2], fontWeight: fontWeight.strong },
   information: { marginTop: space[2] },
   informationSection: { display: 'flex', flexDirection: 'row' },
   schoolAndDate: { color: color.text.quiet },
@@ -23,8 +22,8 @@ const Education = ({ education }: Props) => {
   if (education.length === 0) return null;
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.headline}>Education</Text>
+    <View>
+      <SectionTitle>Education</SectionTitle>
       {education.map(
         ({ degree, endDate, information, school, startDate }, index) => {
           const date =
@@ -35,7 +34,7 @@ const Education = ({ education }: Props) => {
           return (
             // Using index as key is fine because the items are never reordered
             // https://reactjs.org/docs/reconciliation.html#keys
-            <View key={index} style={styles.education}>
+            <View key={index} style={index > 0 ? styles.education : undefined}>
               <Text style={styles.degree}>{degree}</Text>
               <Text style={styles.schoolAndDate}>
                 {school.website === undefined ? (
