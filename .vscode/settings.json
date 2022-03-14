@@ -15,8 +15,20 @@
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "yaml.schemas": {
-    "src/init-template/schemas/header.schema.json": [
-      "src/init-template/data/header.yml"
+    "src/init-template/schemas/contact.schema.json": [
+      "src/init-template/data/contact.yml"
+    ],
+    "src/init-template/schemas/education.schema.json": [
+      "src/init-template/data/education.yml"
+    ],
+    "src/init-template/schemas/personal.schema.json": [
+      "src/init-template/data/personal.yml"
+    ],
+    "src/init-template/schemas/skills.schema.json": [
+      "src/init-template/data/skills.yml"
+    ],
+    "src/init-template/schemas/work-experience.schema.json": [
+      "src/init-template/data/work-experience.yml"
     ]
   }
 }

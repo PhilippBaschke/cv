@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CV skills data",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "proficient": {
+      "description": "Proficient skills",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10
+    },
+
+    "familiar": {
+      "description": "Familiar skills",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10
+    }
+  },
+  "required": ["proficient", "familiar"]
+}

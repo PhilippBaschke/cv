@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CV work experience data",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "jobTitle": {
+        "description": "Job title",
+        "type": "string"
+      },
+
+      "company": {
+        "description": "Information about the Company",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "description": "Company name",
+            "type": "string"
+          },
+          "location": {
+            "description": "Company location (where you worked)",
+            "$ref": "location.schema.json"
+          },
+          "website": {
+            "description": "Company website (without https://)",
+            "type": "string"
+          }
+        },
+        "required": ["name"]
+      },
+
+      "startDate": {
+        "description": "When did you start the job? (YYYY-MM)",
+        "type": "string"
+      },
+      "endDate": {
+        "description": "Until when did you work at this job? (YYYY-MM)",
+        "type": "string"
+      },
+
+      "product": {
+        "description": "Information about the product",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "description": "Product description",
+            "type": "string"
+          },
+          "website": {
+            "description": "Product website (without https://)",
+            "type": "string"
+          }
+        },
+        "required": ["description"]
+      },
+
+      "achievements": {
+        "description": "Job achievements",
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 3,
+        "maxItems": 5
+      }
+    },
+    "required": ["jobTitle", "company", "startDate", "achievements"]
+  }
+}

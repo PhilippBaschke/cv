@@ -1,5 +1,9 @@
 {
   "yaml.schemas": {
-    "schemas/header.schema.json": ["data/header.yml"]
+    "schemas/contact.schema.json": ["data/contact.yml"],
+    "schemas/education.schema.json": ["data/education.yml"],
+    "schemas/personal.schema.json": ["data/personal.yml"],
+    "schemas/skills.schema.json": ["data/skills.yml"],
+    "schemas/work-experience.schema.json": ["data/work-experience.yml"]
   }
 }
