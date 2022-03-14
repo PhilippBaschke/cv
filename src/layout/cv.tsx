@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.base,
     lineHeight,
     padding: space[5],
+    paddingLeft: space[6],
   },
 });
 
