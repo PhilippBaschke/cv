@@ -1,6 +1,6 @@
 import type { WorkExperienceData } from '../data-types/work-experience-data';
 import { formatDate } from './format-date';
-import { color, space, typeScale } from './tokens';
+import { color, fontWeight, space, typeScale } from './tokens';
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
 import React from 'react';
 
@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
   bulletPoint: { marginLeft: space[2], marginRight: space[1] },
   container: { marginTop: space[3] },
   companyAndDate: { color: color.text.quiet },
-  headline: { fontSize: typeScale[2], fontWeight: 700 },
-  jobTitle: { fontSize: typeScale[1], fontWeight: 700 },
+  headline: { fontSize: typeScale[2], fontWeight: fontWeight.strong },
+  jobTitle: { fontSize: typeScale[1], fontWeight: fontWeight.strong },
   workExperience: { marginTop: space[3] },
 });
 

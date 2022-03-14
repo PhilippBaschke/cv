@@ -1,15 +1,15 @@
 import type { EducationData } from '../data-types/education-data';
 import { formatDate } from './format-date';
-import { color, space, typeScale } from './tokens';
+import { color, fontWeight, space, typeScale } from './tokens';
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
   bulletPoint: { marginLeft: space[2], marginRight: space[1] },
   container: { marginTop: space[3] },
-  degree: { fontSize: typeScale[1], fontWeight: 700 },
+  degree: { fontSize: typeScale[1], fontWeight: fontWeight.strong },
   education: { marginTop: space[3] },
-  headline: { fontSize: typeScale[2], fontWeight: 700 },
+  headline: { fontSize: typeScale[2], fontWeight: fontWeight.strong },
   information: { marginTop: space[2] },
   informationSection: { display: 'flex', flexDirection: 'row' },
   schoolAndDate: { color: color.text.quiet },
