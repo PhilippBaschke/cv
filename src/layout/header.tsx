@@ -1,5 +1,6 @@
 import type { ContactData } from '../data-types/contact-data';
 import type { PersonalData } from '../data-types/personal-data';
+import { SectionTitle } from './components/section-title';
 import { color, space, typeScale } from './tokens';
 import React from 'react';
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
@@ -90,7 +91,12 @@ const Header = ({
         )}
       </View>
     </View>
-    {summary !== undefined && <Text style={styles.section}>{summary}</Text>}
+    {summary !== undefined && (
+      <View>
+        <SectionTitle>Summary</SectionTitle>
+        <Text>{summary}</Text>
+      </View>
+    )}
   </View>
 );
 
