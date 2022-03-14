@@ -1,5 +1,6 @@
 import type { EducationData } from '../data-types/education-data';
 import { formatDate } from './format-date';
+import { color } from './tokens';
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
 import React from 'react';
 
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
   headline: { fontSize: 14, fontWeight: 700 },
   information: { marginTop: 8 },
   informationSection: { display: 'flex', flexDirection: 'row' },
-  schoolAndDate: { color: 'gray' },
+  schoolAndDate: { color: color.text.quiet },
 });
 
 type Props = {

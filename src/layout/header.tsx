@@ -1,5 +1,6 @@
 import type { ContactData } from '../data-types/contact-data';
 import type { PersonalData } from '../data-types/personal-data';
+import { color } from './tokens';
 import React from 'react';
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
 
@@ -9,7 +10,7 @@ const styles = StyleSheet.create({
   listElement: {
     marginLeft: 8,
     paddingLeft: 8,
-    borderLeftColor: 'gray',
+    borderLeftColor: color.text.quiet,
     borderLeftWidth: 1,
   },
   name: { fontSize: 16 },
