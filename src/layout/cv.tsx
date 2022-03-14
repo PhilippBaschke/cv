@@ -6,6 +6,7 @@ import type { WorkExperienceData } from '../data-types/work-experience-data';
 import { Education } from './education';
 import { Header } from './header';
 import { Skills } from './skills';
+import { font } from './tokens';
 import { WorkExperience } from './work-experience';
 import React from 'react';
 import { Page, Document, StyleSheet } from '@react-pdf/renderer';
@@ -19,7 +20,7 @@ type Props = {
 };
 
 const styles = StyleSheet.create({
-  page: { fontSize: 10, padding: 16 },
+  page: { fontFamily: font.base, fontSize: 10, padding: 16 },
 });
 
 const Cv = ({

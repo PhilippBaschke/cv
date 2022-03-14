@@ -18,6 +18,7 @@
   "scripts": {
     "build:ts": "tsc",
     "build:data": "cpy init-template '../dist' --cwd=src",
+    "build:fonts": "cpy fonts '../dist' --cwd=src",
     "build": "run-p 'build:*'",
     "clean": "rimraf dist",
     "cli:run": "node dist/cli.js",

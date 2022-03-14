@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { cwd } from 'node:process';
 import { Cv } from './layout/cv';
+import { registerFonts } from './layout/register-fonts';
 import type { ContactData } from './data-types/contact-data';
 import type { EducationData } from './data-types/education-data';
 import type { PersonalData } from './data-types/personal-data';
@@ -16,6 +17,8 @@ type Options = {
 };
 
 const create = async (outputFile: string, { dataProject }: Options) => {
+  registerFonts();
+
   const filePath = path.resolve(outputFile);
   const projectPath = path.resolve(dataProject ?? cwd());
 
