@@ -1,11 +1,11 @@
 import type { SkillsData } from '../data-types/skills-data';
-import { space } from './tokens';
+import { space, typeScale } from './tokens';
 import { StyleSheet, Text, View } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
   container: { marginTop: space[3] },
-  headline: { fontSize: 14, fontWeight: 700 },
+  headline: { fontSize: typeScale[2], fontWeight: 700 },
   skills: { marginTop: space[2] },
 });
 

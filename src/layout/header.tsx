@@ -1,6 +1,6 @@
 import type { ContactData } from '../data-types/contact-data';
 import type { PersonalData } from '../data-types/personal-data';
-import { color, space } from './tokens';
+import { color, space, typeScale } from './tokens';
 import React from 'react';
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
 
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     borderLeftColor: color.text.quiet,
     borderLeftWidth: 1,
   },
-  name: { fontSize: 16 },
+  name: { fontSize: typeScale[4] },
 });
 
 type Props = ContactData & PersonalData;
