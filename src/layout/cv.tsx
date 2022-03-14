@@ -6,7 +6,7 @@ import type { WorkExperienceData } from '../data-types/work-experience-data';
 import { Education } from './education';
 import { Header } from './header';
 import { Skills } from './skills';
-import { color, font, space, typeScale } from './tokens';
+import { color, font, lineHeight, space, typeScale } from './tokens';
 import { WorkExperience } from './work-experience';
 import React from 'react';
 import { Page, Document, StyleSheet } from '@react-pdf/renderer';
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     color: color.text.intense,
     fontFamily: font.base,
     fontSize: typeScale[0],
+    lineHeight,
     padding: space[5],
   },
 });

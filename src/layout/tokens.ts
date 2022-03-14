@@ -9,6 +9,7 @@ const font = {
   base: 'Zilla Slab',
 } as const;
 
+const lineHeight = 1.5;
 const space = [0, 4, 8, 12, 20, 32, 52] as const;
 
 /**
@@ -17,4 +18,4 @@ const space = [0, 4, 8, 12, 20, 32, 52] as const;
  */
 const typeScale = [10, 12.5, 15.63, 19.53, 24.41] as const;
 
-export { color, font, space, typeScale };
+export { color, font, lineHeight, space, typeScale };
