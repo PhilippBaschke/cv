@@ -1,18 +1,18 @@
 import type { WorkExperienceData } from '../data-types/work-experience-data';
 import { formatDate } from './format-date';
-import { color } from './tokens';
+import { color, space } from './tokens';
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
   achievement: { display: 'flex', flexDirection: 'row' },
-  achievements: { marginTop: 8 },
-  bulletPoint: { marginLeft: 8, marginRight: 4 },
-  container: { marginTop: 16 },
+  achievements: { marginTop: space[2] },
+  bulletPoint: { marginLeft: space[2], marginRight: space[1] },
+  container: { marginTop: space[3] },
   companyAndDate: { color: color.text.quiet },
   headline: { fontSize: 14, fontWeight: 700 },
   jobTitle: { fontSize: 12, fontWeight: 700 },
-  workExperience: { marginTop: 16 },
+  workExperience: { marginTop: space[3] },
 });
 
 type Props = {

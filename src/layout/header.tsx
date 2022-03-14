@@ -1,15 +1,15 @@
 import type { ContactData } from '../data-types/contact-data';
 import type { PersonalData } from '../data-types/personal-data';
-import { color } from './tokens';
+import { color, space } from './tokens';
 import React from 'react';
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
-  section: { marginTop: 8 },
+  section: { marginTop: space[2] },
   list: { display: 'flex', flexDirection: 'row' },
   listElement: {
-    marginLeft: 8,
-    paddingLeft: 8,
+    marginLeft: space[2],
+    paddingLeft: space[2],
     borderLeftColor: color.text.quiet,
     borderLeftWidth: 1,
   },

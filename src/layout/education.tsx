@@ -1,16 +1,16 @@
 import type { EducationData } from '../data-types/education-data';
 import { formatDate } from './format-date';
-import { color } from './tokens';
+import { color, space } from './tokens';
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
-  bulletPoint: { marginLeft: 8, marginRight: 4 },
-  container: { marginTop: 16 },
+  bulletPoint: { marginLeft: space[2], marginRight: space[1] },
+  container: { marginTop: space[3] },
   degree: { fontSize: 12, fontWeight: 700 },
-  education: { marginTop: 16 },
+  education: { marginTop: space[3] },
   headline: { fontSize: 14, fontWeight: 700 },
-  information: { marginTop: 8 },
+  information: { marginTop: space[2] },
   informationSection: { display: 'flex', flexDirection: 'row' },
   schoolAndDate: { color: color.text.quiet },
 });

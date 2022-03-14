@@ -9,4 +9,6 @@ const font = {
   base: 'Zilla Slab',
 } as const;
 
-export { color, font };
+const space = [0, 4, 8, 12, 20, 32, 52] as const;
+
+export { color, font, space };
