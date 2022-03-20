@@ -1,5 +1,6 @@
 import type { EducationData } from '../data-types/education-data';
 import { SectionTitle } from './components/section-title';
+import { SubTitle } from './components/sub-title';
 import { Text } from './components/text';
 import { Title } from './components/title';
 import { formatDate } from './format-date';
@@ -36,7 +37,7 @@ const Education = ({ education }: Props) => {
             // https://reactjs.org/docs/reconciliation.html#keys
             <View key={index} style={index > 0 ? styles.education : undefined}>
               <Title>{degree}</Title>
-              <Text quiet>
+              <SubTitle>
                 {school.website === undefined ? (
                   school.name
                 ) : (
@@ -46,7 +47,7 @@ const Education = ({ education }: Props) => {
                   ? undefined
                   : ` (${school.location.city}, ${school.location.country})`}{' '}
                 | {date}
-              </Text>
+              </SubTitle>
               {information !== undefined && (
                 <View style={styles.information}>
                   {information.map(({ title, content }, index) => (

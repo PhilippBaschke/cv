@@ -1,5 +1,6 @@
 import type { WorkExperienceData } from '../data-types/work-experience-data';
 import { SectionTitle } from './components/section-title';
+import { SubTitle } from './components/sub-title';
 import { Text } from './components/text';
 import { Title } from './components/title';
 import { formatDate } from './format-date';
@@ -42,7 +43,7 @@ const WorkExperience = ({ workExperience }: Props) => {
               style={index > 0 ? styles.workExperience : undefined}
             >
               <Title>{jobTitle}</Title>
-              <Text quiet>
+              <SubTitle>
                 {company.website === undefined ? (
                   company.name
                 ) : (
@@ -52,7 +53,7 @@ const WorkExperience = ({ workExperience }: Props) => {
                   ? undefined
                   : ` (${company.location.city}, ${company.location.country})`}{' '}
                 | {date}
-              </Text>
+              </SubTitle>
               {product !== undefined && (
                 <Text>
                   {product.description}
