@@ -1,5 +1,6 @@
-import { color, fontWeight, space } from '../tokens';
-import ReactPDF, { StyleSheet, Text, View } from '@react-pdf/renderer';
+import { color, space } from '../tokens';
+import { Text } from './text';
+import ReactPDF, { StyleSheet, View } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
@@ -16,7 +17,6 @@ const styles = StyleSheet.create({
     marginRight: space[2],
     paddingBottom: space[1],
   },
-  title: { fontWeight: fontWeight.strong },
 });
 
 type Props = {
@@ -27,7 +27,7 @@ type Props = {
 
 const SkillsList = ({ skills, style, title }: Props) => (
   <View style={style}>
-    <Text style={styles.title}>{title}</Text>
+    <Text strong>{title}</Text>
     <View style={styles.list}>
       {skills.map((skill, index) => (
         // Using index as key is fine because the items are never reordered

@@ -1,16 +1,16 @@
 import type { WorkExperienceData } from '../data-types/work-experience-data';
 import { SectionTitle } from './components/section-title';
+import { Text } from './components/text';
 import { formatDate } from './format-date';
-import { color, fontWeight, space, typeScale } from './tokens';
-import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
+import { space, typeScale } from './tokens';
+import { Link, StyleSheet, View } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
   achievement: { display: 'flex', flexDirection: 'row' },
   achievements: { marginTop: space[2] },
   bulletPoint: { marginLeft: space[2], marginRight: space[1] },
-  companyAndDate: { color: color.text.quiet },
-  jobTitle: { fontSize: typeScale[1], fontWeight: fontWeight.strong },
+  jobTitle: { fontSize: typeScale[1] },
   workExperience: { marginTop: space[3] },
 });
 
@@ -41,8 +41,10 @@ const WorkExperience = ({ workExperience }: Props) => {
               key={index}
               style={index > 0 ? styles.workExperience : undefined}
             >
-              <Text style={styles.jobTitle}>{jobTitle}</Text>
-              <Text style={styles.companyAndDate}>
+              <Text strong style={styles.jobTitle}>
+                {jobTitle}
+              </Text>
+              <Text quiet>
                 {company.website === undefined ? (
                   company.name
                 ) : (

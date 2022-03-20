@@ -1,9 +1,10 @@
 import type { ContactData } from '../data-types/contact-data';
 import type { PersonalData } from '../data-types/personal-data';
 import { SectionTitle } from './components/section-title';
+import { Text } from './components/text';
 import { color, space, typeScale } from './tokens';
 import React from 'react';
-import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
+import { Link, StyleSheet, View } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
   section: { marginTop: space[2] },
