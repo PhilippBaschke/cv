@@ -1,4 +1,5 @@
 import { color, fontWeight } from '../tokens';
+import { ensureStyleArray } from './ensure-style-array';
 import ReactPDF, {
   StyleSheet,
   Text as ReactPDFText,
@@ -16,10 +17,7 @@ type Props = ReactPDF.TextProps & {
 };
 
 const Text = ({ children, quiet, strong, style, ...textProps }: Props) => {
-  // Ensure that the given style is Style[] to be able to concat the text styles
-  const styleArray = [style ?? []].flat();
-
-  const combinedStyle = styleArray.concat([
+  const combinedStyle = ensureStyleArray(style).concat([
     quiet ? styles.quiet : {},
     strong ? styles.strong : {},
   ]);
