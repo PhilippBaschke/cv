@@ -1,11 +1,13 @@
 import type { WorkExperienceData } from '../data-types/work-experience-data';
+import { Link } from './components/link';
 import { SectionTitle } from './components/section-title';
 import { SubTitle } from './components/sub-title';
+import { SubTitleLink } from './components/sub-title-link';
 import { Text } from './components/text';
 import { Title } from './components/title';
 import { formatDate } from './format-date';
 import { space } from './tokens';
-import { Link, StyleSheet, View } from '@react-pdf/renderer';
+import { StyleSheet, View } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
@@ -47,7 +49,9 @@ const WorkExperience = ({ workExperience }: Props) => {
                 {company.website === undefined ? (
                   company.name
                 ) : (
-                  <Link src={`https://${company.website}`}>{company.name}</Link>
+                  <SubTitleLink src={`https://${company.website}`}>
+                    {company.name}
+                  </SubTitleLink>
                 )}
                 {company.location === undefined
                   ? undefined

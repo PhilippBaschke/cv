@@ -1,11 +1,12 @@
 import type { EducationData } from '../data-types/education-data';
 import { SectionTitle } from './components/section-title';
 import { SubTitle } from './components/sub-title';
+import { SubTitleLink } from './components/sub-title-link';
 import { Text } from './components/text';
 import { Title } from './components/title';
 import { formatDate } from './format-date';
 import { space } from './tokens';
-import { Link, StyleSheet, View } from '@react-pdf/renderer';
+import { StyleSheet, View } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
@@ -41,7 +42,9 @@ const Education = ({ education }: Props) => {
                 {school.website === undefined ? (
                   school.name
                 ) : (
-                  <Link src={`https://${school.website}`}>{school.name}</Link>
+                  <SubTitleLink src={`https://${school.website}`}>
+                    {school.name}
+                  </SubTitleLink>
                 )}
                 {school.location === undefined
                   ? undefined
