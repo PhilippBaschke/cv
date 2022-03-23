@@ -3,9 +3,11 @@ import type { EducationData } from '../data-types/education-data';
 import type { PersonalData } from '../data-types/personal-data';
 import type { SkillsData } from '../data-types/skills-data';
 import type { WorkExperienceData } from '../data-types/work-experience-data';
+import { ContactAndLocation } from './contact-location';
 import { Education } from './education';
 import { Header } from './header';
 import { Skills } from './skills';
+import { Summary } from './summary';
 import {
   color,
   font,
@@ -49,7 +51,9 @@ const Cv = ({
 }: Props) => (
   <Document>
     <Page size="A4" style={styles.page}>
-      <Header image={image} {...contact} {...personal} />
+      <Header image={image} jobTitle={personal.jobTitle} name={personal.name} />
+      <ContactAndLocation {...contact} location={personal.location} />
+      <Summary summary={personal.summary} />
       <WorkExperience workExperience={workExperience} />
       <Education education={education} />
       <Skills {...skills} />
