@@ -21,6 +21,7 @@ import { Page, Document, StyleSheet } from '@react-pdf/renderer';
 type Props = {
   contact: ContactData;
   education: EducationData;
+  image?: string;
   personal: PersonalData;
   skills: SkillsData;
   workExperience: WorkExperienceData;
@@ -41,13 +42,14 @@ const styles = StyleSheet.create({
 const Cv = ({
   contact,
   education,
+  image,
   personal,
   skills,
   workExperience,
 }: Props) => (
   <Document>
     <Page size="A4" style={styles.page}>
-      <Header {...contact} {...personal} />
+      <Header image={image} {...contact} {...personal} />
       <WorkExperience workExperience={workExperience} />
       <Education education={education} />
       <Skills {...skills} />

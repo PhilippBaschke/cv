@@ -5,10 +5,20 @@ import { SectionTitle } from './components/section-title';
 import { Text } from './components/text';
 import { color, space, typeScale } from './tokens';
 import React from 'react';
-import { StyleSheet, View } from '@react-pdf/renderer';
+import { Image, StyleSheet, View } from '@react-pdf/renderer';
+
+const imageSize = space[6];
 
 const styles = StyleSheet.create({
   section: { marginTop: space[2] },
+  image: {
+    borderRadius: imageSize,
+    height: imageSize,
+    // Visually align with the following text
+    marginLeft: -space[1],
+    marginRight: space[3],
+    width: imageSize,
+  },
   list: { display: 'flex', flexDirection: 'row' },
   listElement: {
     marginLeft: space[2],
@@ -16,14 +26,24 @@ const styles = StyleSheet.create({
     borderLeftColor: color.text.quiet,
     borderLeftWidth: 1,
   },
-  name: { fontSize: typeScale[4] },
+  name: { fontSize: typeScale[4], lineHeight: 1.1 },
+  nameSection: {
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'row',
+    marginBottom: space[2],
+  },
 });
 
-type Props = ContactData & PersonalData;
+type Props = ContactData &
+  PersonalData & {
+    image?: string;
+  };
 
 const Header = ({
   email,
   github,
+  image,
   jobTitle,
   linkedin,
   location,
@@ -34,8 +54,15 @@ const Header = ({
   website,
 }: Props) => (
   <View>
-    <Text style={styles.name}>{name}</Text>
-    {jobTitle !== undefined && <Text>{jobTitle}</Text>}
+    <View style={styles.nameSection}>
+      {image && <Image src={image} style={styles.image} />}
+      <View>
+        <Text strong style={styles.name}>
+          {name}
+        </Text>
+        {jobTitle !== undefined && <Text>{jobTitle}</Text>}
+      </View>
+    </View>
     <View style={styles.section}>
       <View style={styles.list}>
         {location !== undefined && (

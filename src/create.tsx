@@ -21,6 +21,7 @@ const create = async (outputFile: string, { dataProject }: Options) => {
 
   const filePath = path.resolve(outputFile);
   const projectPath = path.resolve(dataProject ?? cwd());
+  const imagePath = path.join(projectPath, 'data', 'image.png');
 
   const contact = yaml.load(
     fs.readFileSync(path.join(projectPath, 'data', 'contact.yml'), 'utf8'),
@@ -50,6 +51,7 @@ const create = async (outputFile: string, { dataProject }: Options) => {
     <Cv
       contact={contact}
       education={education}
+      image={fs.existsSync(imagePath) ? imagePath : undefined}
       personal={personal}
       skills={skills}
       workExperience={workExperience}
