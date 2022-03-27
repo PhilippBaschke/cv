@@ -1,20 +1,23 @@
 import type { SkillsData } from '../data-types/skills-data';
-import { StyleSheet, Text, View } from '@react-pdf/renderer';
+import { SectionTitle } from './components/section-title';
+import { SkillsList } from './components/skills-list';
+import { space } from './tokens';
+import { StyleSheet, View } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
-  container: { marginTop: 16 },
-  headline: { fontSize: 14, fontWeight: 700 },
-  skills: { marginTop: 8 },
+  spacedList: { marginBottom: space[2] },
 });
 
 const Skills = ({ familiar, proficient }: SkillsData) => (
-  <View style={styles.container}>
-    <Text style={styles.headline}>Skills</Text>
-    <View style={styles.skills}>
-      <Text>Proficient: {proficient.join(', ')}</Text>
-      <Text>Familiar: {familiar.join(', ')}</Text>
-    </View>
+  <View>
+    <SectionTitle>Skills</SectionTitle>
+    <SkillsList
+      skills={proficient}
+      style={styles.spacedList}
+      title="Proficient"
+    />
+    <SkillsList skills={familiar} title="Familiar" />
   </View>
 );
 
