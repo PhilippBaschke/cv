@@ -2,18 +2,15 @@ import type { EducationData } from '../data-types/education-data';
 import { SectionTitle } from './components/section-title';
 import { SubTitle } from './components/sub-title';
 import { SubTitleLink } from './components/sub-title-link';
-import { Text } from './components/text';
 import { Title } from './components/title';
+import { UnorderedList } from './components/unordered-list';
 import { formatDate } from './format-date';
 import { space } from './tokens';
 import { StyleSheet, View } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
-  bulletPoint: { marginLeft: space[2], marginRight: space[1] },
   education: { marginTop: space[3] },
-  information: { marginTop: space[2] },
-  informationSection: { display: 'flex', flexDirection: 'row' },
 });
 
 type Props = {
@@ -52,18 +49,11 @@ const Education = ({ education }: Props) => {
                 | {date}
               </SubTitle>
               {information !== undefined && (
-                <View style={styles.information}>
-                  {information.map(({ title, content }, index) => (
-                    // Using index as key is fine because the items are never reordered
-                    // https://reactjs.org/docs/reconciliation.html#keys
-                    <View style={styles.informationSection} key={index}>
-                      <Text style={styles.bulletPoint}>•</Text>
-                      <Text>
-                        {title}: {content.join(', ')}
-                      </Text>
-                    </View>
-                  ))}
-                </View>
+                <UnorderedList
+                  items={information.map(
+                    ({ content, title }) => `${title}: ${content.join(', ')}`,
+                  )}
+                />
               )}
             </View>
           );
