@@ -4,7 +4,7 @@ import { StyleSheet } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
-  title: { fontSize: typeScale[1] },
+  title: { fontSize: typeScale[1], lineHeight: 1.3 },
 });
 
 type Props = {

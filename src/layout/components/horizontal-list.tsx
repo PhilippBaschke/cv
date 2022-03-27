@@ -1,8 +1,9 @@
 import { color, space } from '../tokens';
+import { ensureStyleArray } from './ensure-style-array';
 import { Link } from './link';
 import { Text } from './text';
 import React from 'react';
-import { StyleSheet, View } from '@react-pdf/renderer';
+import ReactPDF, { StyleSheet, View } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
   horizontal: { display: 'flex', flexDirection: 'row' },
@@ -12,13 +13,18 @@ const styles = StyleSheet.create({
 type TextItem = { text: string; type: 'text' };
 type LinkItem = { src: string; text: string; type: 'link' };
 type HorizontalListItem = LinkItem | TextItem;
-type Props = { items: HorizontalListItem[]; quiet?: boolean };
+type Props = ReactPDF.ViewProps & {
+  items: HorizontalListItem[];
+  quiet?: boolean;
+};
 
-const HorizontalList = ({ items, quiet }: Props) => {
+const HorizontalList = ({ items, quiet, style }: Props) => {
   if (items.length === 0) return null;
 
+  const combinedStyle = ensureStyleArray(style).concat(styles.horizontal);
+
   return (
-    <View style={styles.horizontal}>
+    <View style={combinedStyle}>
       {items.map((item, index) => (
         // Using index as key is fine because the items are never reordered
         // https://reactjs.org/docs/reconciliation.html#keys

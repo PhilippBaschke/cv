@@ -1,8 +1,14 @@
 import type { Location } from '../../data-types/location';
 import { formatDate } from '../format-date';
+import { space } from '../tokens';
 import type { HorizontalListItem } from './horizontal-list';
 import { HorizontalList } from './horizontal-list';
 import React from 'react';
+import { StyleSheet } from '@react-pdf/renderer';
+
+const styles = StyleSheet.create({
+  container: { marginBottom: space[2] },
+});
 
 type Props = {
   endDate?: string;
@@ -30,7 +36,7 @@ const SubTitle = ({ endDate, location, name, startDate, website }: Props) => {
     { text: date, type: 'text' },
   ];
 
-  return <HorizontalList items={items} quiet />;
+  return <HorizontalList items={items} quiet style={styles.container} />;
 };
 
 export { SubTitle };
