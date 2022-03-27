@@ -12,9 +12,9 @@ const styles = StyleSheet.create({
 type TextItem = { text: string; type: 'text' };
 type LinkItem = { src: string; text: string; type: 'link' };
 type HorizontalListItem = LinkItem | TextItem;
-type Props = { items: HorizontalListItem[] };
+type Props = { items: HorizontalListItem[]; quiet?: boolean };
 
-const HorizontalList = ({ items }: Props) => {
+const HorizontalList = ({ items, quiet }: Props) => {
   if (items.length === 0) return null;
 
   return (
@@ -24,8 +24,12 @@ const HorizontalList = ({ items }: Props) => {
         // https://reactjs.org/docs/reconciliation.html#keys
         <View key={index} style={styles.horizontal}>
           {index > 0 && <Text style={styles.separator}>|</Text>}
-          {item.type === 'text' && <Text>{item.text}</Text>}
-          {item.type === 'link' && <Link src={item.src}>{item.text}</Link>}
+          {item.type === 'text' && <Text quiet={quiet}>{item.text}</Text>}
+          {item.type === 'link' && (
+            <Link quiet={quiet} src={item.src}>
+              {item.text}
+            </Link>
+          )}
         </View>
       ))}
     </View>
