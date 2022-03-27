@@ -5,13 +5,8 @@ import React from 'react';
 import { StyleSheet, View } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
-  list: { display: 'flex', flexDirection: 'row' },
-  listElement: {
-    marginLeft: space[2],
-    paddingLeft: space[2],
-    borderLeftColor: color.text.quiet,
-    borderLeftWidth: 1,
-  },
+  horizontal: { display: 'flex', flexDirection: 'row' },
+  separator: { color: color.primary, marginHorizontal: space[2] },
 });
 
 type TextItem = { text: string; type: 'text' };
@@ -23,25 +18,16 @@ const HorizontalList = ({ items }: Props) => {
   if (items.length === 0) return null;
 
   return (
-    <View style={styles.list}>
-      {items.map((item, index) => {
-        const commonProps = {
-          // Using index as key is fine because the items are never reordered
-          // https://reactjs.org/docs/reconciliation.html#keys
-          key: index,
-          style: index > 0 ? styles.listElement : undefined,
-        };
-
-        if (item.type === 'text') {
-          return <Text {...commonProps}>{item.text}</Text>;
-        }
-
-        return (
-          <Link {...commonProps} src={item.src}>
-            {item.text}
-          </Link>
-        );
-      })}
+    <View style={styles.horizontal}>
+      {items.map((item, index) => (
+        // Using index as key is fine because the items are never reordered
+        // https://reactjs.org/docs/reconciliation.html#keys
+        <View key={index} style={styles.horizontal}>
+          {index > 0 && <Text style={styles.separator}>|</Text>}
+          {item.type === 'text' && <Text>{item.text}</Text>}
+          {item.type === 'link' && <Link src={item.src}>{item.text}</Link>}
+        </View>
+      ))}
     </View>
   );
 };
