@@ -1,5 +1,6 @@
 {
   "yaml.schemas": {
+    "schemas/config.schema.json": ["config.yml"],
     "schemas/contact.schema.json": ["data/contact.yml"],
     "schemas/education.schema.json": ["data/education.yml"],
     "schemas/personal.schema.json": ["data/personal.yml"],

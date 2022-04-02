@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CV config",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "color": {
+      "description": "Color configuration for the CV",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "primary": {
+          "description": "The primary color of the CV",
+          "type": "string"
+        }
+      },
+      "required": ["primary"]
+    },
+
+    "font": {
+      "description": "Font configuration for the CV",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "description": "The base font of the CV",
+          "type": "string"
+        }
+      },
+      "required": ["base"]
+    }
+  },
+  "required": ["color", "font"]
+}

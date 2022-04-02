@@ -15,6 +15,9 @@
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "yaml.schemas": {
+    "src/init-template/schemas/config.schema.json": [
+      "src/init-template/config.yml"
+    ],
     "src/init-template/schemas/contact.schema.json": [
       "src/init-template/data/contact.yml"
     ],
