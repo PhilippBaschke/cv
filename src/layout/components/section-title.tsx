@@ -1,11 +1,11 @@
-import { color, space, typeScale } from '../tokens';
+import { useConfig } from '../config';
+import { space, typeScale } from '../tokens';
 import { Text } from './text';
 import { StyleSheet } from '@react-pdf/renderer';
 import React from 'react';
 
 const styles = StyleSheet.create({
   sectionTitle: {
-    color: color.primary,
     fontSize: typeScale[0],
     marginBottom: space[2],
     marginTop: space[4],
@@ -17,10 +17,14 @@ type Props = {
   children: React.ReactNode;
 };
 
-const SectionTitle = ({ children }: Props) => (
-  <Text strong style={styles.sectionTitle}>
-    {children}
-  </Text>
-);
+const SectionTitle = ({ children }: Props) => {
+  const config = useConfig();
+
+  return (
+    <Text strong style={[styles.sectionTitle, { color: config.color.primary }]}>
+      {children}
+    </Text>
+  );
+};
 
 export { SectionTitle };
