@@ -5,10 +5,6 @@ const color = {
   },
 } as const;
 
-const font = {
-  base: 'Zilla Slab',
-} as const;
-
 const fontWeight = {
   base: 400,
   strong: 700,
@@ -23,4 +19,4 @@ const space = [0, 4, 8, 12, 20, 32, 52] as const;
  */
 const typeScale = [10, 12.5, 15.63, 19.53, 24.41] as const;
 
-export { color, font, fontWeight, lineHeight, space, typeScale };
+export { color, fontWeight, lineHeight, space, typeScale };

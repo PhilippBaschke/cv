@@ -19,8 +19,6 @@ type Options = {
 };
 
 const create = async (outputFile: string, { dataProject }: Options) => {
-  registerFonts();
-
   const filePath = path.resolve(outputFile);
   const projectPath = path.resolve(dataProject ?? cwd());
   const imagePath = path.join(projectPath, 'data', 'image.png');
@@ -51,6 +49,8 @@ const create = async (outputFile: string, { dataProject }: Options) => {
       'utf8',
     ),
   ) as WorkExperienceData;
+
+  registerFonts(projectPath, [config.font.base]);
 
   console.log(`Saving CV in ${filePath}`);
   await renderToFile(

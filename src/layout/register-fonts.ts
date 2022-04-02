@@ -1,40 +1,41 @@
 import path from 'node:path';
-import { font } from './tokens';
 import { Font } from '@react-pdf/renderer';
 
-type Family = typeof font[keyof typeof font];
 type Style = 'Bold' | 'Italic' | 'Regular';
 
 /**
- * Get the src for a given family and style combination
+ * Get the src for a given project path, family and style combination
  *
  * @example
- * // Returns '__dirname/../fonts/Font_Family/FontFamily-Regular.ttf'
- * getFontSrc('Font Family', 'Regular');
+ * // Returns 'path/fonts/Font_Family/FontFamily-Regular.ttf'
+ * getFontSrc('path', 'Font Family')('Regular');
  */
-const getFontSrc = (family: Family, style: Style): string => {
-  return path.resolve(
-    __dirname,
-    '..',
-    'fonts',
-    // The folder names of Google Fonts are Snake_Case
-    family.split(' ').join('_'),
-    // The file names of Google Fonts are PascalCase
-    `${family.split(' ').join('')}-${style}.ttf`,
-  );
-};
+const getFontSrc =
+  (projectPath: string, family: string) =>
+  (style: Style): string => {
+    return path.resolve(
+      projectPath,
+      'fonts',
+      // The folder names of Google Fonts are Snake_Case
+      family.split(' ').join('_'),
+      // The file names of Google Fonts are PascalCase
+      `${family.split(' ').join('')}-${style}.ttf`,
+    );
+  };
 
 /**
- * Register all fonts that are defined in tokens.font
+ * Register all font families
  */
-const registerFonts = (): void => {
-  for (const family of Object.values(font)) {
+const registerFonts = (projectPath: string, fontFamilies: string[]): void => {
+  for (const family of fontFamilies) {
+    const getFamilyFontSrc = getFontSrc(projectPath, family);
+
     Font.register({
       family,
       fonts: [
-        { src: getFontSrc(family, 'Regular') },
-        { src: getFontSrc(family, 'Bold'), fontWeight: 700 },
-        { src: getFontSrc(family, 'Italic'), fontStyle: 'italic' },
+        { src: getFamilyFontSrc('Regular') },
+        { src: getFamilyFontSrc('Bold'), fontWeight: 700 },
+        { src: getFamilyFontSrc('Italic'), fontStyle: 'italic' },
       ],
     });
   }

@@ -15,7 +15,20 @@
         }
       },
       "required": ["primary"]
+    },
+
+    "font": {
+      "description": "Font configuration for the CV",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "description": "The base font of the CV",
+          "type": "string"
+        }
+      },
+      "required": ["base"]
     }
   },
-  "required": ["color"]
+  "required": ["color", "font"]
 }

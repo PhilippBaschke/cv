@@ -1,2 +1,5 @@
 color:
   primary: '#068093'
+
+font:
+  base: Zilla Slab

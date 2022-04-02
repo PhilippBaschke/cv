@@ -5,6 +5,9 @@ const ConfigContext = createContext<Config>({
   color: {
     primary: '#068093',
   },
+  font: {
+    base: 'Zilla Slab',
+  },
 });
 
 const ConfigProvider = ConfigContext.Provider;
