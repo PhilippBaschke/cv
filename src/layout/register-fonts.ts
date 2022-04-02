@@ -1,5 +1,6 @@
 import path from 'node:path';
 import { Font } from '@react-pdf/renderer';
+import { pathExistsSync } from 'fs-extra';
 
 type Style = 'Bold' | 'Italic' | 'Regular';
 
@@ -13,12 +14,25 @@ type Style = 'Bold' | 'Italic' | 'Regular';
 const getFontSrc =
   (projectPath: string, family: string) =>
   (style: Style): string => {
-    return path.resolve(
-      projectPath,
-      'fonts',
-      // The folder names of Google Fonts are Snake_Case
-      family.split(' ').join('_'),
-      // The file names of Google Fonts are PascalCase
+    // The folder names of Google Fonts are Snake_Case
+    const familySnakeCase = family.split(' ').join('_');
+
+    // The file names and style folders of Google Fonts are PascalCase
+    const familyPascalCase = family.split(' ').join('');
+
+    const familyPath = path.resolve(projectPath, 'fonts', familySnakeCase);
+    const variableFamilyPath = path.join(familyPath, 'static');
+    const variableFamilyWithStylePath = path.join(
+      variableFamilyPath,
+      familyPascalCase,
+    );
+
+    return path.join(
+      pathExistsSync(variableFamilyWithStylePath)
+        ? variableFamilyWithStylePath
+        : pathExistsSync(variableFamilyPath)
+        ? variableFamilyPath
+        : familyPath,
       `${family.split(' ').join('')}-${style}.ttf`,
     );
   };
