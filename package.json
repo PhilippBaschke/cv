@@ -2,6 +2,9 @@
   "name": "@philippbaschke/cv",
   "packageManager": "yarn@3.2.0",
   "bin": "dist/cli.js",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@types/fs-extra": "9.0.13",
     "@types/js-yaml": "^4",
