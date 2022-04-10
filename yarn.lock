@@ -111,7 +111,7 @@ __metadata:
     "@types/fs-extra": 9.0.13
     "@types/js-yaml": ^4
     "@types/node": 17.0.21
-    "@types/react": ^17
+    "@types/react": ^16
     "@types/rimraf": ^3
     "@typescript-eslint/parser": 5.13.0
     commander: 9.0.0
@@ -120,7 +120,7 @@ __metadata:
     fs-extra: 10.0.1
     js-yaml: 4.1.0
     npm-run-all: 4.1.5
-    react: 17.0.2
+    react: 16.14.0
     rimraf: 3.0.2
     typescript: 4.6.2
     xo: 0.48.0
@@ -401,20 +401,20 @@ __metadata:
   linkType: hard
 
 "@types/prop-types@npm:*":
-  version: 15.7.4
-  resolution: "@types/prop-types@npm:15.7.4"
-  checksum: ef6e1899e59b876c273811b1bd845022fc66d5a3d11cb38a25b6c566b30514ae38fe20a40f67622f362a4f4f7f9224e22d8da101cff3d6e97e11d7b4c307cfc1
+  version: 15.7.5
+  resolution: "@types/prop-types@npm:15.7.5"
+  checksum: 5b43b8b15415e1f298243165f1d44390403bb2bd42e662bca3b5b5633fdd39c938e91b7fce3a9483699db0f7a715d08cef220c121f723a634972fdf596aec980
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17":
-  version: 17.0.39
-  resolution: "@types/react@npm:17.0.39"
+"@types/react@npm:^16":
+  version: 16.14.24
+  resolution: "@types/react@npm:16.14.24"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: bf04d3c2894559012710d595553e12b422d3b91cd8f4f7e122d8cb044ba9c2ba17f6e8a4e09581359cc5509ddc59cd8c8fabd6774f3505a40a45393f074d6e6e
+  checksum: 823f3fc6219f59dff7a005ca33adbac70e7ef7a5e15a844c40ba36247c007bd1e1fbfc784052336f60ecbee09f06b7c6c7433e8cece3a87247061bbac74b2576
   languageName: node
   linkType: hard
 
@@ -3564,13 +3564,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:17.0.2":
-  version: 17.0.2
-  resolution: "react@npm:17.0.2"
+"react@npm:16.14.0":
+  version: 16.14.0
+  resolution: "react@npm:16.14.0"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
-  checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
+    prop-types: ^15.6.2
+  checksum: 8484f3ecb13414526f2a7412190575fc134da785c02695eb92bb6028c930bfe1c238d7be2a125088fec663cc7cda0a3623373c46807cf2c281f49c34b79881ac
   languageName: node
   linkType: hard
 
