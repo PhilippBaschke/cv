@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/fs-extra", "npm:9.0.13"],\
             ["@types/js-yaml", "npm:4.0.5"],\
             ["@types/node", "npm:17.0.21"],\
-            ["@types/react", "npm:17.0.39"],\
+            ["@types/react", "npm:16.14.24"],\
             ["@types/rimraf", "npm:3.0.2"],\
             ["@typescript-eslint/parser", "virtual:a96c8b2a259da6786c736df9cfd8b352dca20b95cb75c03c805c2851d9be9aa3be76abbe8d967f432834dec2af5262dee8bd0dab6432f53c147216fc03dd38fc#npm:5.13.0"],\
             ["commander", "npm:9.0.0"],\
@@ -46,7 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fs-extra", "npm:10.0.1"],\
             ["js-yaml", "npm:4.1.0"],\
             ["npm-run-all", "npm:4.1.5"],\
-            ["react", "npm:17.0.2"],\
+            ["react", "npm:16.14.0"],\
             ["rimraf", "npm:3.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"],\
             ["xo", "npm:0.48.0"]\
@@ -174,7 +174,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/fs-extra", "npm:9.0.13"],\
             ["@types/js-yaml", "npm:4.0.5"],\
             ["@types/node", "npm:17.0.21"],\
-            ["@types/react", "npm:17.0.39"],\
+            ["@types/react", "npm:16.14.24"],\
             ["@types/rimraf", "npm:3.0.2"],\
             ["@typescript-eslint/parser", "virtual:a96c8b2a259da6786c736df9cfd8b352dca20b95cb75c03c805c2851d9be9aa3be76abbe8d967f432834dec2af5262dee8bd0dab6432f53c147216fc03dd38fc#npm:5.13.0"],\
             ["commander", "npm:9.0.0"],\
@@ -183,7 +183,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fs-extra", "npm:10.0.1"],\
             ["js-yaml", "npm:4.1.0"],\
             ["npm-run-all", "npm:4.1.5"],\
-            ["react", "npm:17.0.2"],\
+            ["react", "npm:16.14.0"],\
             ["rimraf", "npm:3.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"],\
             ["xo", "npm:0.48.0"]\
@@ -325,11 +325,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@react-pdf/primitives", "npm:2.0.2"],\
             ["@react-pdf/render", "npm:2.1.0"],\
             ["@react-pdf/types", "npm:2.0.8"],\
-            ["@types/react", "npm:17.0.39"],\
+            ["@types/react", "npm:16.14.24"],\
             ["blob-stream", "npm:0.1.3"],\
             ["queue", "npm:6.0.2"],\
             ["ramda", "npm:0.26.1"],\
-            ["react", "npm:17.0.2"],\
+            ["react", "npm:16.14.0"],\
             ["react-reconciler", "virtual:e75d3324503883751d0e69d406f5a1f58381a61bfd53a55b434e94299a3dea98f2a9c2e12ee3eb8417cdd64037fcd02818ac0bc15819948b91d2aba18b9a8ec7#npm:0.23.0"],\
             ["scheduler", "npm:0.17.0"]\
           ],\
@@ -512,20 +512,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/prop-types", [\
-        ["npm:15.7.4", {\
-          "packageLocation": "./.yarn/cache/@types-prop-types-npm-15.7.4-592896a9fe-ef6e1899e5.zip/node_modules/@types/prop-types/",\
+        ["npm:15.7.5", {\
+          "packageLocation": "./.yarn/cache/@types-prop-types-npm-15.7.5-2aa48aa177-5b43b8b154.zip/node_modules/@types/prop-types/",\
           "packageDependencies": [\
-            ["@types/prop-types", "npm:15.7.4"]\
+            ["@types/prop-types", "npm:15.7.5"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@types/react", [\
-        ["npm:17.0.39", {\
-          "packageLocation": "./.yarn/cache/@types-react-npm-17.0.39-b4ac1f7bfe-bf04d3c289.zip/node_modules/@types/react/",\
+        ["npm:16.14.24", {\
+          "packageLocation": "./.yarn/cache/@types-react-npm-16.14.24-6f465049cb-823f3fc621.zip/node_modules/@types/react/",\
           "packageDependencies": [\
-            ["@types/react", "npm:17.0.39"],\
-            ["@types/prop-types", "npm:15.7.4"],\
+            ["@types/react", "npm:16.14.24"],\
+            ["@types/prop-types", "npm:15.7.5"],\
             ["@types/scheduler", "npm:0.16.2"],\
             ["csstype", "npm:3.0.11"]\
           ],\
@@ -4348,12 +4348,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["react", [\
-        ["npm:17.0.2", {\
-          "packageLocation": "./.yarn/cache/react-npm-17.0.2-99ba37d931-b254cc17ce.zip/node_modules/react/",\
+        ["npm:16.14.0", {\
+          "packageLocation": "./.yarn/cache/react-npm-16.14.0-932446ec69-8484f3ecb1.zip/node_modules/react/",\
           "packageDependencies": [\
-            ["react", "npm:17.0.2"],\
+            ["react", "npm:16.14.0"],\
             ["loose-envify", "npm:1.4.0"],\
-            ["object-assign", "npm:4.1.1"]\
+            ["object-assign", "npm:4.1.1"],\
+            ["prop-types", "npm:15.8.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4379,11 +4380,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/react-reconciler-virtual-42b539063c/0/cache/react-reconciler-npm-0.23.0-1c8eecf9e3-6bccf22c65.zip/node_modules/react-reconciler/",\
           "packageDependencies": [\
             ["react-reconciler", "virtual:e75d3324503883751d0e69d406f5a1f58381a61bfd53a55b434e94299a3dea98f2a9c2e12ee3eb8417cdd64037fcd02818ac0bc15819948b91d2aba18b9a8ec7#npm:0.23.0"],\
-            ["@types/react", "npm:17.0.39"],\
+            ["@types/react", "npm:16.14.24"],\
             ["loose-envify", "npm:1.4.0"],\
             ["object-assign", "npm:4.1.1"],\
             ["prop-types", "npm:15.8.1"],\
-            ["react", "npm:17.0.2"],\
+            ["react", "npm:16.14.0"],\
             ["scheduler", "npm:0.17.0"]\
           ],\
           "packagePeers": [\
