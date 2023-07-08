@@ -1,10 +1,15 @@
 {
   "name": "@philippbaschke/cv",
+  "description": "A React PDF and YAML CV generator",
+  "homepage": "https://github.com/PhilippBaschke/cv#readme",
+  "bugs": "https://github.com/PhilippBaschke/cv/issues",
+  "license": "GPL-3.0-only",
   "packageManager": "yarn@3.2.0",
   "bin": "dist/cli.js",
   "files": [
     "dist"
   ],
+  "repository": "github:PhilippBaschke/cv",
   "devDependencies": {
     "@types/fs-extra": "9.0.13",
     "@types/js-yaml": "^4",
