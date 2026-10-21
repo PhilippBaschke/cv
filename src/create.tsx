@@ -3,7 +3,6 @@ import path from "node:path";
 import { cwd } from "node:process";
 import { renderToFile } from "@react-pdf/renderer";
 import { load } from "js-yaml";
-import React from "react";
 import type { Config } from "./data-types/config.js";
 import type { ContactData } from "./data-types/contact-data.js";
 import type { EducationData } from "./data-types/education-data.js";

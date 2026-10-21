@@ -1,5 +1,4 @@
 import { StyleSheet, View } from "@react-pdf/renderer";
-import React from "react";
 import type { SkillsData } from "../data-types/skills-data.js";
 import { SectionTitle } from "./components/section-title.js";
 import { SkillsList } from "./components/skills-list.js";

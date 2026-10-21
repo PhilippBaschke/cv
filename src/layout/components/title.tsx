@@ -1,5 +1,5 @@
 import { StyleSheet } from "@react-pdf/renderer";
-import React from "react";
+import type { ReactNode } from "react";
 import { typeScale } from "../tokens.js";
 import { Text } from "./text.js";
 
@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
 });
 
 type Props = {
-	children: React.ReactNode;
+	children: ReactNode;
 };
 
 const Title = ({ children }: Props) => (

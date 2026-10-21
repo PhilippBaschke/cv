@@ -1,5 +1,4 @@
 import { StyleSheet } from "@react-pdf/renderer";
-import React from "react";
 import type { Location } from "../../data-types/location.js";
 import { formatDate } from "../format-date.js";
 import { space } from "../tokens.js";

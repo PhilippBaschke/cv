@@ -1,6 +1,5 @@
-import type ReactPDF from "@react-pdf/renderer";
+import type { ViewProps } from "@react-pdf/renderer";
 import { StyleSheet, View } from "@react-pdf/renderer";
-import React from "react";
 import { useConfig } from "../config.js";
 import { space } from "../tokens.js";
 import { ensureStyleArray } from "./ensure-style-array.js";
@@ -15,7 +14,7 @@ const styles = StyleSheet.create({
 type TextItem = { text: string; type: "text" };
 type LinkItem = { src: string; text: string; type: "link" };
 type HorizontalListItem = LinkItem | TextItem;
-type Props = ReactPDF.default.ViewProps & {
+type Props = ViewProps & {
 	items: HorizontalListItem[];
 	quiet?: boolean;
 };

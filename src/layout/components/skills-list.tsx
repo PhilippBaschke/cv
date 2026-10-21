@@ -1,8 +1,7 @@
-import type ReactPDF from "@react-pdf/renderer";
+import type { ViewProps } from "@react-pdf/renderer";
 import { StyleSheet, View } from "@react-pdf/renderer";
-import React from "react";
 import { useConfig } from "../config.js";
-import { space } from "../tokens.js";
+import { space, typeScale } from "../tokens.js";
 import { Text } from "./text.js";
 
 const styles = StyleSheet.create({
@@ -13,6 +12,8 @@ const styles = StyleSheet.create({
 	},
 	skill: {
 		borderBottomWidth: 1,
+		// react-pdf resolves unitless lineHeight against the element's own fontSize (default 18), not the inherited one
+		fontSize: typeScale[0],
 		lineHeight: 1,
 		marginBottom: space[1],
 		marginRight: space[2],
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
 
 type Props = {
 	skills: string[];
-	style?: ReactPDF.default.ViewProps["style"];
+	style?: ViewProps["style"];
 	title: string;
 };
 

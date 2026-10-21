@@ -1,5 +1,4 @@
 import { StyleSheet, View } from "@react-pdf/renderer";
-import React from "react";
 import type { ContactData } from "../data-types/contact-data.js";
 import type { PersonalData } from "../data-types/personal-data.js";
 import type { HorizontalListItem } from "./components/horizontal-list.js";
