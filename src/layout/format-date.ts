@@ -1,4 +1,4 @@
-import { format, parse } from 'date-fns';
+import { format, parse } from "date-fns";
 
 /**
  * Format a given date string as MMM yyyy (e.g. Dec 2021)
@@ -7,6 +7,6 @@ import { format, parse } from 'date-fns';
  * @returns A date string in the format MMM yyyy (e.g. Dec 2021)
  */
 const formatDate = (date: string): string =>
-  format(parse(date, 'yyyy-MM', new Date()), 'MMM yyyy');
+	format(parse(date, "yyyy-MM", new Date()), "MMM yyyy");
 
 export { formatDate };

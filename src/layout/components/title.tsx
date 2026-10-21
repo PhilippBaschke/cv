@@ -1,20 +1,20 @@
-import { StyleSheet } from '@react-pdf/renderer';
-import React from 'react';
-import { typeScale } from '../tokens';
-import { Text } from './text';
+import { StyleSheet } from "@react-pdf/renderer";
+import React from "react";
+import { typeScale } from "../tokens";
+import { Text } from "./text";
 
 const styles = StyleSheet.create({
-  title: { fontSize: typeScale[1], lineHeight: 1.3 },
+	title: { fontSize: typeScale[1], lineHeight: 1.3 },
 });
 
 type Props = {
-  children: React.ReactNode;
+	children: React.ReactNode;
 };
 
 const Title = ({ children }: Props) => (
-  <Text strong style={styles.title}>
-    {children}
-  </Text>
+	<Text strong style={styles.title}>
+		{children}
+	</Text>
 );
 
 export { Title };

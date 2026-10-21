@@ -1,42 +1,42 @@
 {
-  "name": "@philippbaschke/cv",
-  "description": "A React PDF and YAML CV generator",
-  "homepage": "https://github.com/PhilippBaschke/cv#readme",
-  "bugs": "https://github.com/PhilippBaschke/cv/issues",
-  "license": "GPL-3.0-only",
-  "bin": "dist/cli.js",
-  "files": [
-    "dist"
-  ],
-  "repository": "github:PhilippBaschke/cv",
-  "devDependencies": {
-    "@biomejs/biome": "2.5.15",
-    "@types/fs-extra": "9.0.13",
-    "@types/js-yaml": "^4",
-    "@types/node": "17.0.21",
-    "@types/react": "^16",
-    "@types/rimraf": "^3",
-    "cpy-cli": "4.0.0",
-    "npm-run-all": "4.1.5",
-    "rimraf": "3.0.2",
-    "typescript": "4.6.2"
-  },
-  "scripts": {
-    "build:ts": "tsc",
-    "build:data": "cpy init-template '../dist' --cwd=src",
-    "build": "run-p 'build:*'",
-    "clean": "rimraf dist",
-    "cli:run": "node dist/cli.js",
-    "cli": "run-s clean build \"cli:run -- {@}\" --",
-    "test": "biome check"
-  },
-  "dependencies": {
-    "@react-pdf/renderer": "2.1.1",
-    "commander": "9.0.0",
-    "date-fns": "2.28.0",
-    "fs-extra": "10.0.1",
-    "js-yaml": "4.1.0",
-    "react": "16.14.0"
-  },
-  "version": "1.0.1"
+	"name": "@philippbaschke/cv",
+	"description": "A React PDF and YAML CV generator",
+	"homepage": "https://github.com/PhilippBaschke/cv#readme",
+	"bugs": "https://github.com/PhilippBaschke/cv/issues",
+	"license": "GPL-3.0-only",
+	"bin": "dist/cli.js",
+	"files": [
+		"dist"
+	],
+	"repository": "github:PhilippBaschke/cv",
+	"devDependencies": {
+		"@biomejs/biome": "2.5.15",
+		"@types/fs-extra": "9.0.13",
+		"@types/js-yaml": "^4",
+		"@types/node": "17.0.21",
+		"@types/react": "^16",
+		"@types/rimraf": "^3",
+		"cpy-cli": "4.0.0",
+		"npm-run-all": "4.1.5",
+		"rimraf": "3.0.2",
+		"typescript": "4.6.2"
+	},
+	"scripts": {
+		"build:ts": "tsc",
+		"build:data": "cpy init-template '../dist' --cwd=src",
+		"build": "run-p 'build:*'",
+		"clean": "rimraf dist",
+		"cli:run": "node dist/cli.js",
+		"cli": "run-s clean build \"cli:run -- {@}\" --",
+		"test": "biome check"
+	},
+	"dependencies": {
+		"@react-pdf/renderer": "2.1.1",
+		"commander": "9.0.0",
+		"date-fns": "2.28.0",
+		"fs-extra": "10.0.1",
+		"js-yaml": "4.1.0",
+		"react": "16.14.0"
+	},
+	"version": "1.0.1"
 }
