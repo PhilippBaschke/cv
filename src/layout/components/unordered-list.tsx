@@ -16,8 +16,7 @@ const UnorderedList = ({ items }: Props) => {
 	return (
 		<View>
 			{items.map((item, index) => (
-				// Using index as key is fine because the items are never reordered
-				// https://reactjs.org/docs/reconciliation.html#keys
+				// biome-ignore lint/suspicious/noArrayIndexKey: items are never reordered
 				<View key={index} style={styles.item}>
 					<Text style={styles.bulletPoint}>•</Text>
 					<Text>{item}</Text>

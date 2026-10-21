@@ -23,8 +23,7 @@ const Education = ({ education }: Props) => {
 			<SectionTitle>Education</SectionTitle>
 			{education.map(
 				({ degree, endDate, information, school, startDate }, index) => (
-					// Using index as key is fine because the items are never reordered
-					// https://reactjs.org/docs/reconciliation.html#keys
+					// biome-ignore lint/suspicious/noArrayIndexKey: items are never reordered
 					<View key={index} style={index > 0 ? styles.education : undefined}>
 						<Title>{degree}</Title>
 						<SubTitle endDate={endDate} startDate={startDate} {...school} />

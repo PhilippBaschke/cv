@@ -30,8 +30,7 @@ const HorizontalList = ({ items, quiet, style }: Props) => {
 	return (
 		<View style={combinedStyle}>
 			{items.map((item, index) => (
-				// Using index as key is fine because the items are never reordered
-				// https://reactjs.org/docs/reconciliation.html#keys
+				// biome-ignore lint/suspicious/noArrayIndexKey: items are never reordered
 				<View key={index} style={styles.horizontal}>
 					{index > 0 && (
 						<Text style={[styles.separator, { color: config.color.primary }]}>

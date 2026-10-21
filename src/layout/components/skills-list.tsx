@@ -34,9 +34,8 @@ const SkillsList = ({ skills, style, title }: Props) => {
 			<Text strong>{title}</Text>
 			<View style={styles.list}>
 				{skills.map((skill, index) => (
-					// Using index as key is fine because the items are never reordered
-					// https://reactjs.org/docs/reconciliation.html#keys
 					<Text
+						// biome-ignore lint/suspicious/noArrayIndexKey: items are never reordered
 						key={index}
 						style={[styles.skill, { borderColor: config.color.primary }]}
 					>

@@ -28,9 +28,8 @@ const WorkExperience = ({ workExperience }: Props) => {
 					{ achievements, company, endDate, jobTitle, product, startDate },
 					index,
 				) => (
-					// Using index as key is fine because the items are never reordered
-					// https://reactjs.org/docs/reconciliation.html#keys
 					<View
+						// biome-ignore lint/suspicious/noArrayIndexKey: items are never reordered
 						key={index}
 						style={index > 0 ? styles.workExperience : undefined}
 					>
