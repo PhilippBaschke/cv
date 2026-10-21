@@ -5,11 +5,16 @@
 	"bugs": "https://github.com/PhilippBaschke/cv/issues",
 	"license": "GPL-3.0-only",
 	"type": "module",
-	"bin": "dist/cli.js",
+	"bin": {
+		"cv": "dist/cli.js"
+	},
 	"files": [
 		"dist"
 	],
-	"repository": "github:PhilippBaschke/cv",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PhilippBaschke/cv.git"
+	},
 	"engines": {
 		"node": ">=22.12"
 	},

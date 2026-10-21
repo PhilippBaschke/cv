@@ -1,18 +1,42 @@
-# https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+# https://docs.npmjs.com/trusted-publishers
 name: Publish Package to npmjs
 on:
   release:
-    types: [created]
+    types: [published]
+
+permissions:
+  contents: read
+
 jobs:
-  build:
+  test:
+    uses: ./.github/workflows/ci.yml
+
+  publish:
+    needs: test
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # OIDC token for npm trusted publishing (and provenance)
+      id-token: write
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: '16.14.2'
-          registry-url: 'https://registry.npmjs.org'
-      - run: yarn build
-      - run: yarn npm publish --access public
-        env:
-          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          node-version-file: .tool-versions
+          registry-url: https://registry.npmjs.org
+          # No caching in release builds (cache poisoning)
+          package-manager-cache: false
+      - name: Check release tag matches package version
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::Release tag $GITHUB_REF_NAME does not match package.json version $version"
+            exit 1
+          fi
+      - run: npm ci
+      - run: npm run build
+      # Staged: goes public only after approval with 2FA on npmjs.com.
+      # Prerelease versions (1.1.0-rc.0) go to the next dist-tag so npx users stay on latest
+      - run: |
+          version="$(node -p "require('./package.json').version")"
+          npm stage publish $([[ "$version" == *-* ]] && echo --tag next)
