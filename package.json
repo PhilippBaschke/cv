@@ -11,7 +11,6 @@
 	"repository": "github:PhilippBaschke/cv",
 	"devDependencies": {
 		"@biomejs/biome": "2.5.15",
-		"@types/fs-extra": "9.0.13",
 		"@types/js-yaml": "^4",
 		"@types/node": "17.0.21",
 		"@types/react": "^16",
@@ -34,7 +33,6 @@
 		"@react-pdf/renderer": "2.1.1",
 		"commander": "9.0.0",
 		"date-fns": "2.28.0",
-		"fs-extra": "10.0.1",
 		"js-yaml": "4.1.0",
 		"react": "16.14.0"
 	},

@@ -1,6 +1,6 @@
+import { existsSync } from "node:fs";
 import path from "node:path";
 import { Font } from "@react-pdf/renderer";
-import { pathExistsSync } from "fs-extra";
 
 type Style = "Bold" | "Italic" | "Regular";
 
@@ -28,9 +28,9 @@ const getFontSrc =
 		);
 
 		return path.join(
-			pathExistsSync(variableFamilyWithStylePath)
+			existsSync(variableFamilyWithStylePath)
 				? variableFamilyWithStylePath
-				: pathExistsSync(variableFamilyPath)
+				: existsSync(variableFamilyPath)
 					? variableFamilyPath
 					: familyPath,
 			`${family.split(" ").join("")}-${style}.ttf`,
