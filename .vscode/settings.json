@@ -1,11 +1,15 @@
 {
-  "xo.enable": true,
-  "xo.format.enable": true,
   "[javascript]": {
-    "editor.defaultFormatter": "samverschueren.linter-xo"
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "samverschueren.linter-xo"
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "yaml.schemas": {
     "src/init-template/schemas/config.schema.json": [

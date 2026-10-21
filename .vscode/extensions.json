@@ -1,6 +1,6 @@
 {
   "recommendations": [
-    "redhat.vscode-yaml",
-    "samverschueren.linter-xo"
+    "biomejs.biome",
+    "redhat.vscode-yaml"
   ]
 }
