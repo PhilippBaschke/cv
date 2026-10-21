@@ -14,4 +14,11 @@ describe("formatDate", () => {
 		vi.stubEnv("TZ", "America/Los_Angeles");
 		expect(formatDate("2021-01")).toBe("Jan 2021");
 	});
+
+	it.each(["2021-13", "2021-00", "2021-1", "Dec 2021", ""])(
+		"should reject %j with a descriptive error",
+		(input) => {
+			expect(() => formatDate(input)).toThrow(/yyyy-MM/);
+		},
+	);
 });
