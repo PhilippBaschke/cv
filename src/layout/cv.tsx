@@ -1,3 +1,5 @@
+import React from 'react';
+import { Page, Document, StyleSheet } from '@react-pdf/renderer';
 import type { ContactData } from '../data-types/contact-data';
 import type { EducationData } from '../data-types/education-data';
 import type { PersonalData } from '../data-types/personal-data';
@@ -11,8 +13,6 @@ import { Skills } from './skills';
 import { Summary } from './summary';
 import { color, fontWeight, lineHeight, space, typeScale } from './tokens';
 import { WorkExperience } from './work-experience';
-import React from 'react';
-import { Page, Document, StyleSheet } from '@react-pdf/renderer';
 
 type Props = {
   contact: ContactData;

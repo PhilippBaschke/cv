@@ -1,8 +1,8 @@
+import React from 'react';
+import { Image, StyleSheet, View } from '@react-pdf/renderer';
 import type { PersonalData } from '../data-types/personal-data';
 import { Text } from './components/text';
 import { space, typeScale } from './tokens';
-import React from 'react';
-import { Image, StyleSheet, View } from '@react-pdf/renderer';
 
 const imageSize = space[6];
 const styles = StyleSheet.create({

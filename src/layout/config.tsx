@@ -1,5 +1,5 @@
-import { Config } from '../data-types/config';
 import { createContext, useContext } from 'react';
+import { Config } from '../data-types/config';
 
 const ConfigContext = createContext<Config>({
   color: {

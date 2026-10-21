@@ -1,10 +1,10 @@
-import { color, fontWeight } from '../tokens';
-import { ensureStyleArray } from './ensure-style-array';
 import ReactPDF, {
   StyleSheet,
   Text as ReactPDFText,
 } from '@react-pdf/renderer';
 import React from 'react';
+import { color, fontWeight } from '../tokens';
+import { ensureStyleArray } from './ensure-style-array';
 
 const styles = StyleSheet.create({
   quiet: { color: color.text.quiet },

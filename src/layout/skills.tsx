@@ -1,9 +1,9 @@
+import { StyleSheet, View } from '@react-pdf/renderer';
+import React from 'react';
 import type { SkillsData } from '../data-types/skills-data';
 import { SectionTitle } from './components/section-title';
 import { SkillsList } from './components/skills-list';
 import { space } from './tokens';
-import { StyleSheet, View } from '@react-pdf/renderer';
-import React from 'react';
 
 const styles = StyleSheet.create({
   spacedList: { marginBottom: space[2] },

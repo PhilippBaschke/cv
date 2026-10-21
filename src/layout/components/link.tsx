@@ -1,10 +1,10 @@
-import { color } from '../tokens';
-import { ensureStyleArray } from './ensure-style-array';
 import ReactPDF, {
   StyleSheet,
   Link as ReactPDFLink,
 } from '@react-pdf/renderer';
 import React from 'react';
+import { color } from '../tokens';
+import { ensureStyleArray } from './ensure-style-array';
 
 const styles = StyleSheet.create({
   link: { color: color.text.intense, textDecoration: 'none' },

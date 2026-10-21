@@ -1,3 +1,5 @@
+import { StyleSheet, View } from '@react-pdf/renderer';
+import React from 'react';
 import type { WorkExperienceData } from '../data-types/work-experience-data';
 import { Link } from './components/link';
 import { SectionTitle } from './components/section-title';
@@ -6,8 +8,6 @@ import { Text } from './components/text';
 import { Title } from './components/title';
 import { UnorderedList } from './components/unordered-list';
 import { space } from './tokens';
-import { StyleSheet, View } from '@react-pdf/renderer';
-import React from 'react';
 
 const styles = StyleSheet.create({
   workExperience: { marginTop: space[3] },

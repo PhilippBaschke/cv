@@ -1,10 +1,10 @@
+import React from 'react';
+import { StyleSheet, View } from '@react-pdf/renderer';
 import type { ContactData } from '../data-types/contact-data';
 import type { PersonalData } from '../data-types/personal-data';
 import type { HorizontalListItem } from './components/horizontal-list';
 import { HorizontalList } from './components/horizontal-list';
 import { space } from './tokens';
-import React from 'react';
-import { StyleSheet, View } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
   container: { marginTop: space[2] },

@@ -1,10 +1,10 @@
+import React from 'react';
+import ReactPDF, { StyleSheet, View } from '@react-pdf/renderer';
 import { useConfig } from '../config';
 import { space } from '../tokens';
 import { ensureStyleArray } from './ensure-style-array';
 import { Link } from './link';
 import { Text } from './text';
-import React from 'react';
-import ReactPDF, { StyleSheet, View } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
   horizontal: { display: 'flex', flexDirection: 'row' },

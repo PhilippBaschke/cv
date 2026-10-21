@@ -1,11 +1,11 @@
+import { StyleSheet, View } from '@react-pdf/renderer';
+import React from 'react';
 import type { EducationData } from '../data-types/education-data';
 import { SectionTitle } from './components/section-title';
 import { SubTitle } from './components/sub-title';
 import { Title } from './components/title';
 import { UnorderedList } from './components/unordered-list';
 import { space } from './tokens';
-import { StyleSheet, View } from '@react-pdf/renderer';
-import React from 'react';
 
 const styles = StyleSheet.create({
   education: { marginTop: space[3] },

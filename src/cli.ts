@@ -1,7 +1,7 @@
 #!/usr/bin/env node
+import { Command } from 'commander';
 import { create } from './create';
 import { init } from './init';
-import { Command } from 'commander';
 
 const program = new Command();
 

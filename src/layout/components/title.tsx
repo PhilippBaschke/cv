@@ -1,7 +1,7 @@
-import { typeScale } from '../tokens';
-import { Text } from './text';
 import { StyleSheet } from '@react-pdf/renderer';
 import React from 'react';
+import { typeScale } from '../tokens';
+import { Text } from './text';
 
 const styles = StyleSheet.create({
   title: { fontSize: typeScale[1], lineHeight: 1.3 },

@@ -1,6 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { cwd } from 'node:process';
+import React from 'react';
+import { renderToFile } from '@react-pdf/renderer';
+import yaml from 'js-yaml';
 import { ConfigProvider } from './layout/config';
 import { Cv } from './layout/cv';
 import { registerFonts } from './layout/register-fonts';
@@ -10,9 +13,6 @@ import type { EducationData } from './data-types/education-data';
 import type { PersonalData } from './data-types/personal-data';
 import type { SkillsData } from './data-types/skills-data';
 import type { WorkExperienceData } from './data-types/work-experience-data';
-import React from 'react';
-import { renderToFile } from '@react-pdf/renderer';
-import yaml from 'js-yaml';
 
 type Options = {
   dataProject?: string;
