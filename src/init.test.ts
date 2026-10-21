@@ -1,16 +1,12 @@
-import { execFileSync } from "node:child_process";
 import { existsSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { git } from "./git.js";
 import { init } from "./init.js";
 
 const committedFiles = (projectPath: string) =>
-	execFileSync(
-		"git",
-		["-C", projectPath, "ls-tree", "-r", "--name-only", "HEAD"],
-		{ encoding: "utf8" },
-	);
+	git("-C", projectPath, "ls-tree", "-r", "--name-only", "HEAD");
 
 describe("init", () => {
 	const originalCwd = process.cwd();
