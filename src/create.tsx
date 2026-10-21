@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { cwd } from "node:process";
 import { renderToFile } from "@react-pdf/renderer";
-import yaml from "js-yaml";
+import { load } from "js-yaml";
 import React from "react";
 import type { Config } from "./data-types/config.js";
 import type { ContactData } from "./data-types/contact-data.js";
@@ -23,27 +23,27 @@ const create = async (outputFile: string, { dataProject }: Options) => {
 	const projectPath = path.resolve(dataProject ?? cwd());
 	const imagePath = path.join(projectPath, "data", "image.png");
 
-	const config = yaml.load(
+	const config = load(
 		fs.readFileSync(path.join(projectPath, "config.yml"), "utf8"),
 	) as Config;
 
-	const contact = yaml.load(
+	const contact = load(
 		fs.readFileSync(path.join(projectPath, "data", "contact.yml"), "utf8"),
 	) as ContactData;
 
-	const education = yaml.load(
+	const education = load(
 		fs.readFileSync(path.join(projectPath, "data", "education.yml"), "utf8"),
 	) as EducationData;
 
-	const personal = yaml.load(
+	const personal = load(
 		fs.readFileSync(path.join(projectPath, "data", "personal.yml"), "utf8"),
 	) as PersonalData;
 
-	const skills = yaml.load(
+	const skills = load(
 		fs.readFileSync(path.join(projectPath, "data", "skills.yml"), "utf8"),
 	) as SkillsData;
 
-	const workExperience = yaml.load(
+	const workExperience = load(
 		fs.readFileSync(
 			path.join(projectPath, "data", "work-experience.yml"),
 			"utf8",
