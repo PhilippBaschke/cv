@@ -1,9 +1,9 @@
 type SkillsData = {
-  /** Proficient skills */
-  proficient: string[];
+	/** Proficient skills */
+	proficient: string[];
 
-  /** Familiar skills */
-  familiar: string[];
+	/** Familiar skills */
+	familiar: string[];
 };
 
 export type { SkillsData };

@@ -1,31 +1,31 @@
-import { color } from '../tokens';
-import { ensureStyleArray } from './ensure-style-array';
-import ReactPDF, {
-  StyleSheet,
-  Link as ReactPDFLink,
-} from '@react-pdf/renderer';
-import React from 'react';
+import type { LinkProps } from "@react-pdf/renderer";
+import { Link as ReactPDFLink, StyleSheet } from "@react-pdf/renderer";
+import type { PropsWithChildren } from "react";
+import { color } from "../tokens.js";
+import { ensureStyleArray } from "./ensure-style-array.js";
 
 const styles = StyleSheet.create({
-  link: { color: color.text.intense, textDecoration: 'none' },
-  quiet: { color: color.text.quiet },
+	link: { color: color.text.intense, textDecoration: "none" },
+	quiet: { color: color.text.quiet },
 });
 
-type Props = ReactPDF.LinkProps & {
-  quiet?: boolean;
-};
+type Props = PropsWithChildren<
+	LinkProps & {
+		quiet?: boolean;
+	}
+>;
 
 const Link = ({ children, quiet, style, ...linkProps }: Props) => {
-  const combinedStyle = ensureStyleArray(style).concat([
-    styles.link,
-    quiet ? styles.quiet : {},
-  ]);
+	const combinedStyle = ensureStyleArray(style).concat([
+		styles.link,
+		quiet ? styles.quiet : {},
+	]);
 
-  return (
-    <ReactPDFLink {...linkProps} style={combinedStyle}>
-      {children}
-    </ReactPDFLink>
-  );
+	return (
+		<ReactPDFLink {...linkProps} style={combinedStyle}>
+			{children}
+		</ReactPDFLink>
+	);
 };
 
 export { Link };

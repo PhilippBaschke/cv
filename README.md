@@ -3,7 +3,7 @@
 A React PDF and YAML CV generator
 
 [![npm version](https://img.shields.io/npm/v/@philippbaschke/cv?style=flat-square)](https://www.npmjs.com/package/@philippbaschke/cv)
-[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square)](https://github.com/xojs/xo)
+[![Checked with Biome](https://img.shields.io/badge/Checked_with-Biome-60a5fa?style=flat-square&logo=biome)](https://biomejs.dev)
 [![License](https://img.shields.io/github/license/PhilippBaschke/cv?style=flat-square)](LICENSE)
 
 ## Table of Contents

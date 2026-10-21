@@ -1,0 +1,15 @@
+version: 2
+updates:
+  # Keeps the SHA-pinned actions current
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    # Skip releases younger than a week, in case one turns out compromised
+    cooldown:
+      default-days: 7
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: ci

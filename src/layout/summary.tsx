@@ -1,20 +1,19 @@
-import type { PersonalData } from '../data-types/personal-data';
-import { SectionTitle } from './components/section-title';
-import { Text } from './components/text';
-import React from 'react';
-import { View } from '@react-pdf/renderer';
+import { View } from "@react-pdf/renderer";
+import type { PersonalData } from "../data-types/personal-data.js";
+import { SectionTitle } from "./components/section-title.js";
+import { Text } from "./components/text.js";
 
-type Props = Pick<PersonalData, 'summary'>;
+type Props = Pick<PersonalData, "summary">;
 
 const Summary = ({ summary }: Props) => {
-  if (summary === undefined) return null;
+	if (summary === undefined) return null;
 
-  return (
-    <View>
-      <SectionTitle>Summary</SectionTitle>
-      <Text>{summary}</Text>
-    </View>
-  );
+	return (
+		<View>
+			<SectionTitle>Summary</SectionTitle>
+			<Text>{summary}</Text>
+		</View>
+	);
 };
 
 export { Summary };

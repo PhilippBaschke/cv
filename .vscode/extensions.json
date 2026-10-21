@@ -1,7 +1,3 @@
 {
-  "recommendations": [
-    "redhat.vscode-yaml",
-    "samverschueren.linter-xo",
-    "arcanis.vscode-zipfs"
-  ]
+	"recommendations": ["biomejs.biome", "redhat.vscode-yaml"]
 }

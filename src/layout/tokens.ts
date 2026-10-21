@@ -1,13 +1,13 @@
 const color = {
-  text: {
-    intense: '#1C1C1C',
-    quiet: '#595959',
-  },
+	text: {
+		intense: "#1C1C1C",
+		quiet: "#595959",
+	},
 } as const;
 
 const fontWeight = {
-  base: 400,
-  strong: 700,
+	base: 400,
+	strong: 700,
 } as const;
 
 const lineHeight = 1.5;
