@@ -1,4 +1,4 @@
-import type { Location } from "./location";
+import type { Location } from "./location.js";
 
 type PersonalData = {
 	/** Full name */

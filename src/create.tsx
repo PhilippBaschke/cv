@@ -4,15 +4,15 @@ import { cwd } from "node:process";
 import { renderToFile } from "@react-pdf/renderer";
 import yaml from "js-yaml";
 import React from "react";
-import type { Config } from "./data-types/config";
-import type { ContactData } from "./data-types/contact-data";
-import type { EducationData } from "./data-types/education-data";
-import type { PersonalData } from "./data-types/personal-data";
-import type { SkillsData } from "./data-types/skills-data";
-import type { WorkExperienceData } from "./data-types/work-experience-data";
-import { ConfigProvider } from "./layout/config";
-import { Cv } from "./layout/cv";
-import { registerFonts } from "./layout/register-fonts";
+import type { Config } from "./data-types/config.js";
+import type { ContactData } from "./data-types/contact-data.js";
+import type { EducationData } from "./data-types/education-data.js";
+import type { PersonalData } from "./data-types/personal-data.js";
+import type { SkillsData } from "./data-types/skills-data.js";
+import type { WorkExperienceData } from "./data-types/work-experience-data.js";
+import { ConfigProvider } from "./layout/config.js";
+import { Cv } from "./layout/cv.js";
+import { registerFonts } from "./layout/register-fonts.js";
 
 type Options = {
 	dataProject?: string;

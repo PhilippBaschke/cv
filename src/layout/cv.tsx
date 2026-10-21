@@ -1,18 +1,18 @@
 import { Document, Page, StyleSheet } from "@react-pdf/renderer";
 import React from "react";
-import type { ContactData } from "../data-types/contact-data";
-import type { EducationData } from "../data-types/education-data";
-import type { PersonalData } from "../data-types/personal-data";
-import type { SkillsData } from "../data-types/skills-data";
-import type { WorkExperienceData } from "../data-types/work-experience-data";
-import { useConfig } from "./config";
-import { ContactAndLocation } from "./contact-location";
-import { Education } from "./education";
-import { Header } from "./header";
-import { Skills } from "./skills";
-import { Summary } from "./summary";
-import { color, fontWeight, lineHeight, space, typeScale } from "./tokens";
-import { WorkExperience } from "./work-experience";
+import type { ContactData } from "../data-types/contact-data.js";
+import type { EducationData } from "../data-types/education-data.js";
+import type { PersonalData } from "../data-types/personal-data.js";
+import type { SkillsData } from "../data-types/skills-data.js";
+import type { WorkExperienceData } from "../data-types/work-experience-data.js";
+import { useConfig } from "./config.js";
+import { ContactAndLocation } from "./contact-location.js";
+import { Education } from "./education.js";
+import { Header } from "./header.js";
+import { Skills } from "./skills.js";
+import { Summary } from "./summary.js";
+import { color, fontWeight, lineHeight, space, typeScale } from "./tokens.js";
+import { WorkExperience } from "./work-experience.js";
 
 type Props = {
 	contact: ContactData;

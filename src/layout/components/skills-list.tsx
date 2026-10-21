@@ -1,9 +1,9 @@
 import type ReactPDF from "@react-pdf/renderer";
 import { StyleSheet, View } from "@react-pdf/renderer";
 import React from "react";
-import { useConfig } from "../config";
-import { space } from "../tokens";
-import { Text } from "./text";
+import { useConfig } from "../config.js";
+import { space } from "../tokens.js";
+import { Text } from "./text.js";
 
 const styles = StyleSheet.create({
 	list: {
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 
 type Props = {
 	skills: string[];
-	style?: ReactPDF.ViewProps["style"];
+	style?: ReactPDF.default.ViewProps["style"];
 	title: string;
 };
 

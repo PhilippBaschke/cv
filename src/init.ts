@@ -13,7 +13,7 @@ const init = (pathArg: string) => {
 	console.log(`Initializing CV data project in ${projectPath}`);
 	mkdirSync(projectPath, { recursive: true });
 	execSync(`git init --initial-branch main ${projectPath}`);
-	cpSync(path.resolve(__dirname, "init-template"), projectPath, {
+	cpSync(path.resolve(import.meta.dirname, "init-template"), projectPath, {
 		recursive: true,
 	});
 	execSync(`git -C ${projectPath} add .`);

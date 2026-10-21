@@ -1,11 +1,11 @@
 import { StyleSheet, View } from "@react-pdf/renderer";
 import React from "react";
-import type { EducationData } from "../data-types/education-data";
-import { SectionTitle } from "./components/section-title";
-import { SubTitle } from "./components/sub-title";
-import { Title } from "./components/title";
-import { UnorderedList } from "./components/unordered-list";
-import { space } from "./tokens";
+import type { EducationData } from "../data-types/education-data.js";
+import { SectionTitle } from "./components/section-title.js";
+import { SubTitle } from "./components/sub-title.js";
+import { Title } from "./components/title.js";
+import { UnorderedList } from "./components/unordered-list.js";
+import { space } from "./tokens.js";
 
 const styles = StyleSheet.create({
 	education: { marginTop: space[3] },

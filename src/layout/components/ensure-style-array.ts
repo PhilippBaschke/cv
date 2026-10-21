@@ -1,9 +1,9 @@
 import type ReactPDF from "@react-pdf/renderer";
 
 type StyleProp =
-	| ReactPDF.ViewProps["style"]
-	| ReactPDF.TextProps["style"]
-	| ReactPDF.LinkProps["style"];
+	| ReactPDF.default.ViewProps["style"]
+	| ReactPDF.default.TextProps["style"]
+	| ReactPDF.default.LinkProps["style"];
 
 /**
  * Ensure that the style prop is Style[] to be able to concat with more styles

@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "@react-pdf/renderer";
 import React from "react";
-import { space } from "../tokens";
-import { Text } from "./text";
+import { space } from "../tokens.js";
+import { Text } from "./text.js";
 
 const styles = StyleSheet.create({
 	bulletPoint: { marginLeft: space[2], marginRight: space[1] },

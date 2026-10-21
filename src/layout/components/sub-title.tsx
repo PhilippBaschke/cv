@@ -1,10 +1,10 @@
 import { StyleSheet } from "@react-pdf/renderer";
 import React from "react";
-import type { Location } from "../../data-types/location";
-import { formatDate } from "../format-date";
-import { space } from "../tokens";
-import type { HorizontalListItem } from "./horizontal-list";
-import { HorizontalList } from "./horizontal-list";
+import type { Location } from "../../data-types/location.js";
+import { formatDate } from "../format-date.js";
+import { space } from "../tokens.js";
+import type { HorizontalListItem } from "./horizontal-list.js";
+import { HorizontalList } from "./horizontal-list.js";
 
 const styles = StyleSheet.create({
 	container: { marginBottom: space[2] },
