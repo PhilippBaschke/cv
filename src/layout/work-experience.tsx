@@ -9,6 +9,7 @@ import { UnorderedList } from "./components/unordered-list.js";
 import { space } from "./tokens.js";
 
 const styles = StyleSheet.create({
+	product: { marginBottom: space[1] },
 	workExperience: { marginTop: space[3] },
 });
 
@@ -37,7 +38,7 @@ const WorkExperience = ({ workExperience }: Props) => {
 						<Title>{jobTitle}</Title>
 						<SubTitle endDate={endDate} startDate={startDate} {...company} />
 						{product !== undefined && (
-							<Text>
+							<Text style={styles.product}>
 								{product.description}
 								{product.website !== undefined && (
 									<Text>
