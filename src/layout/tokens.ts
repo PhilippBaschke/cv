@@ -11,7 +11,7 @@ const fontWeight = {
 } as const;
 
 const lineHeight = 1.5;
-const space = [0, 4, 8, 12, 20, 32, 52] as const;
+const space = [0, 4, 8, 12, 20, 32, 52, 84] as const;
 
 /**
  * A major third type scale

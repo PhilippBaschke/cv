@@ -31,6 +31,8 @@ const WorkExperience = ({ workExperience }: Props) => {
 						// biome-ignore lint/suspicious/noArrayIndexKey: items are never reordered
 						key={index}
 						style={index > 0 ? styles.workExperience : undefined}
+						// Entries are short, so keep each one on a single page
+						wrap={false}
 					>
 						<Title>{jobTitle}</Title>
 						<SubTitle endDate={endDate} startDate={startDate} {...company} />

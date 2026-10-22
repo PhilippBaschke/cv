@@ -53,6 +53,9 @@ const registerFonts = (projectPath: string, fontFamilies: string[]): void => {
 			],
 		});
 	}
+
+	// Only break lines at spaces and existing hyphens (e.g. not "capacity-plan-ning")
+	Font.registerHyphenationCallback((word) => [word]);
 };
 
 export { registerFonts };
