@@ -1,7 +1,7 @@
-import { execSync } from "node:child_process";
 import { cpSync, existsSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { program } from "commander";
+import { git } from "./git.js";
 
 const init = (pathArg: string) => {
 	const projectPath = path.resolve(pathArg);
@@ -12,12 +12,12 @@ const init = (pathArg: string) => {
 
 	console.log(`Initializing CV data project in ${projectPath}`);
 	mkdirSync(projectPath, { recursive: true });
-	execSync(`git init --initial-branch main ${projectPath}`);
+	git("init", "--initial-branch", "main", projectPath);
 	cpSync(path.resolve(import.meta.dirname, "init-template"), projectPath, {
 		recursive: true,
 	});
-	execSync(`git -C ${projectPath} add .`);
-	execSync(`git -C ${projectPath} commit -m "Initialize CV data project"`);
+	git("-C", projectPath, "add", ".");
+	git("-C", projectPath, "commit", "-m", "Initialize CV data project");
 };
 
 export { init };
